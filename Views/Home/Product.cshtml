@@ -1,37 +1,69 @@
-﻿
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@model LightBakes.Models.Product
 
 <div class="center-content container">
     <div class="row">
         <div class="col">
-            <h1 class="text-bold text-center">Beurre de sesame</h1><br>
+            <h1 class="text-bold text-center">@Model.Title</h1><br>
             <hr><br>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-lg-6 col-md-5 col-sm-12"></div>
+        <div class="col-lg-6 col-md-5 col-sm-12">
+            <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                @foreach (var img in Model.Images)
+                {
+                    <li data-thumb="/Content/images/products/@img">
+                        <img src="/Content/images/products/@img" />
+                    </li>
+                }
+            </ul>
+        </div>
         <div class="col-lg-6 col-md-7 col-sm-12">
             <br class="d-block d-md-none">
-            <p>Cette pâte à tartiner est une purée issue du broyage des graines de sésame. Riche en fibres et en oligoéléments, cet incontournable de la cuisine proche-orientale regorge de bienfaits pour la santé. <br><br> <u class="text-small">Remarque:</u>                <span class="text-small"> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span></p>
+            <p>@Html.Raw(Model.Description)</p>
             <p><span class="text-bold">Ingédients</span></p>
-            <p>100% de sésame entières grillées.</p>
-            <p><span class="text-bold">Valeur nutritionnelle</span></p>
-            <p>573 Kcal / 100 gr</p>
+            <p>@Model.Ingredient</p>
+            @if (!string.IsNullOrEmpty(Model.NutritionalValue))
+            {
+                <p><span class="text-bold">Valeur nutritionnelle</span></p>
+                <p>@Model.NutritionalValue</p>
+            }
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-sm-4 col-6">
-                    <div class="form-group"><select name="price-option" class="form-control"><option value="8">200 gr (8 TND)</option><option value="15">500 gr (15 TND)</option></select></div>
+                    <div class="form-group">
+                        <select name="price-option" class="form-control">
+                            @foreach (var unity in Model.UnityOptions)
+                            {
+                                <option value="@unity.Price">@unity.Unity (@unity.Price TND)</option>
+                            }
+                        </select>
+                    </div>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-4 col-6">
-                    <div class="form-group"><select name="product-option" class="form-control"><option value="naturel">naturel (Gratuit)</option><option value="avec miel">avec miel (+0.5 TND)</option><option value="avec sucre stévia">avec sucre stévia (+0.5 TND)</option></select></div>
+                    <div class="form-group">
+                        <select name="product-option" class="form-control">
+                            @foreach (var option in Model.ProductOptions)
+                            {
+                                <option value="@option.Option">
+                                    @option.Option (@if (option.Price != 0)
+                                    {<text>+@option.Price TND</text>}
+                                else
+                                {<text>Gratuit</text>})
+                                </option>
+                            }
+                        </select>
+                    </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-2 col-3">
-                    <div class="form-group"><input name="quantity" type="text" class="form-control" value="1"></div>
+                    <div class="form-group">
+                        <input name="quantity" type="text" class="form-control" value="1">
+                    </div>
                 </div>
                 <div class="col-lg-5 col-md-9 col-sm-6 col-9">
-                    <div class="form-group"><button type="button" class="btn btn-outline-primary btn-block">Ajouter au panier</button></div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-outline-primary btn-block">Ajouter au panier</button>
+                    </div>
                 </div>
                 <div class="col-12">
                     <p class="text-large text-bold orange">8 TND</p>
@@ -41,30 +73,70 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="text-center col">
-            <h1 class="border-orange inline-block">Produits similaires</h1><br>
-        </div>
-    </div>
-    <div class="row">
-        @for (int i = 1; i < 5; i++)
-        {
-            var images = "/images/img" + i + ".jpg";
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="menu-item">
-                    <div class="img-area"><img src="~/Content/@images" alt="Beurre de cacahuète"></div>
-                    <div style="text-align: center;"><br><span class="text-bold">Beurre de cacahuète</span> <br><span class="text-thin text-small">Health - Recipe - Creamy</span> <br><span class="text-bold text-italic">8 TND</span><span class="text-small"> (200 gr)</span></div>
-                </div>
+@if (ViewBag.SimilarProducts != null)
+{
+
+    <br />
+    <br />
+    <br />
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="text-center col">
+                <h1 class="border-orange inline-block">Produits similaires</h1><br>
             </div>
-        }
+        </div>
+        <ul id="content-slider">
+            @foreach (var product in ViewBag.SimilarProducts)
+            {
+                <li>
+                    <a class="menu-item-link" href="/product/@product.Id">
+                        <div class="menu-item">
+                            <div class="img-area"><img src="~/Content/images/products/@product.Images[0]" alt="@product.Title" /></div>
+                            <div style="text-align: center;">
+                                <br />
+                                <span class="text-bold">@product.Title</span> <br />
+                                <span class="text-thin text-small">@product.Tags</span> <br />
+                                <span class="text-bold text-italic">@product.UnityOptions[0].Price TND</span><span class="text-small"> (@product.UnityOptions[0].Unity)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
     </div>
-</div>
+
+    <br/><br/>
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/Content/lightslider.css" />
+}
 
 @section Scripts {
+    <script src="~/Scripts/lightslider.js"></script>
     <script>
         $(function () {
             $("#header").addClass("header-black-bg");
+
+            $('#image-gallery').lightSlider({
+                gallery: true,
+                item: 1,
+                thumbItem: @Model.Images.Length,
+                slideMargin: 0,
+                speed: 1000,
+                auto: false,
+                loop: false,
+                onSliderLoad: function () {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }
+            });
+
+            $("#content-slider").lightSlider({
+                loop: true,
+                keyPress: true
+            });
+
         });
     </script>
 }

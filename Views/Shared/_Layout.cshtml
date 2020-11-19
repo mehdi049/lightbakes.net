@@ -30,7 +30,7 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Gallery">Gallery</a>
+                        <a class="nav-link" href="/Gallery">Gallerie</a>
                     </li>
                 </ul>
             </div>
@@ -44,7 +44,7 @@
     @RenderBody()
 
     <div id="contact-section">
-        <div class="react-parallax" data-parallax="scroll" data-image-src="/Content/images/img-bg2.jpg">
+        <div class="react-parallax" data-parallax="scroll" data-image-src="/Content/images/bg/img-bg2.jpg">
             <div id="contact" class="container">
                 <div class="row">
                     <div id="contact-form" class="col-lg-6">
@@ -101,6 +101,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @RenderSection("styles", required: false)
     <script src="~/Scripts/parallax.min.js"></script>
 </body>
 </html>

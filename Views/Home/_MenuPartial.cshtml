@@ -1,0 +1,36 @@
+﻿@model LightBakes.Models.Product[]
+
+<div class="container">
+    <div id="menu-text" class="justify-content-md-center row">
+        <div class="col-md-auto col-4"><span class="menu-selected">Tout</span></div>
+        <div class="col-md-auto col-4"><span>Granola</span></div>
+        <div class="col-md-auto col-4"><span>Muffins</span></div>
+        <div class="col-md-auto col-4"><span>Energie</span></div>
+        <div class="col-md-auto col-4"><span>Beurre</span></div>
+        <div class="col-md-auto col-4"><span>Nutella</span></div>
+        <div class="col-md-auto col-4"><span>Sauce</span></div>
+        <div class="col-md-auto col-4"><span>Tarte</span></div>
+    </div>
+</div>
+<br />
+<br />
+<div class="container-fluid">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a class="menu-item-link" href="/product/@product.Id">
+                    <div class="menu-item">
+                        <div class="img-area"><img src="~/Content/images/products/@product.Images[0]" alt="@product.Title" /></div>
+                        <div style="text-align: center;">
+                            <br />
+                            <span class="text-bold">@product.Title</span> <br />
+                            <span class="text-thin text-small">@product.Tags</span> <br />
+                            <span class="text-bold text-italic">@product.UnityOptions[0].Price TND</span><span class="text-small"> (@product.UnityOptions[0].Unity)</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

@@ -6,41 +6,7 @@
     </div>
 </div>
 <br />
-<div class="container">
-    <div id="menu-text" class="justify-content-md-center row">
-        <div class="col-md-auto col-4"><span class="menu-selected">Tout</span></div>
-        <div class="col-md-auto col-4"><span>Granola</span></div>
-        <div class="col-md-auto col-4"><span>Muffins</span></div>
-        <div class="col-md-auto col-4"><span>Energie</span></div>
-        <div class="col-md-auto col-4"><span>Beurre</span></div>
-        <div class="col-md-auto col-4"><span>Nutella</span></div>
-        <div class="col-md-auto col-4"><span>Sauce</span></div>
-        <div class="col-md-auto col-4"><span>Tarte</span></div>
-    </div>
-</div>
-<br />
-<br />
-<div class="container-fluid">
-    <div class="row">
-        @for (int i = 1; i < 18; i++)
-        {
-            var images = "/images/img" + i + ".jpg";
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a class="menu-item-link" href="/product/1">
-                    <div class="menu-item">
-                        <div class="img-area"><img src="~/Content/@images" alt="Beurre de cacahuète" /></div>
-                        <div style="text-align: center;">
-                            <br />
-                            <span class="text-bold">Beurre de cacahuète</span> <br />
-                            <span class="text-thin text-small">Health - Recipe - Creamy</span> <br />
-                            <span class="text-bold text-italic">8 TND</span><span class="text-small"> (200 gr)</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        }
-    </div>
-</div>
+@{Html.RenderAction("_MenuPartial"); }
 
 
 @section Scripts {

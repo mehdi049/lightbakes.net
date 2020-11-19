@@ -124,6 +124,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,42 +138,43 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fontawesome.min.css" />
-    <Content Include="Content\images\img-bg1.jpg" />
-    <Content Include="Content\images\img-bg2.jpg" />
-    <Content Include="Content\images\img1-2.jpg" />
-    <Content Include="Content\images\img1.jpg" />
-    <Content Include="Content\images\img10-2.jpg" />
-    <Content Include="Content\images\img10-3.jpg" />
-    <Content Include="Content\images\img10.jpg" />
-    <Content Include="Content\images\img11-2.jpg" />
-    <Content Include="Content\images\img11.jpg" />
-    <Content Include="Content\images\img12-2.jpg" />
-    <Content Include="Content\images\img12-3.jpg" />
-    <Content Include="Content\images\img12.jpg" />
-    <Content Include="Content\images\img13-2.jpg" />
-    <Content Include="Content\images\img13-3.jpg" />
-    <Content Include="Content\images\img13.jpg" />
-    <Content Include="Content\images\img14-2.jpg" />
-    <Content Include="Content\images\img14-3.jpg" />
-    <Content Include="Content\images\img14.jpg" />
-    <Content Include="Content\images\img15.jpg" />
-    <Content Include="Content\images\img16-2.jpg" />
-    <Content Include="Content\images\img16-3.jpg" />
-    <Content Include="Content\images\img16.jpg" />
-    <Content Include="Content\images\img17-2.jpg" />
-    <Content Include="Content\images\img17.jpg" />
-    <Content Include="Content\images\img2.jpg" />
-    <Content Include="Content\images\img3-2.jpg" />
-    <Content Include="Content\images\img3.jpg" />
-    <Content Include="Content\images\img4.jpg" />
-    <Content Include="Content\images\img5.jpg" />
-    <Content Include="Content\images\img6.jpg" />
-    <Content Include="Content\images\img7.jpg" />
-    <Content Include="Content\images\img8-2.jpg" />
-    <Content Include="Content\images\img8.jpg" />
-    <Content Include="Content\images\img9-2.jpg" />
-    <Content Include="Content\images\img9.jpg" />
+    <Content Include="Content\images\lightslider\controls.png" />
     <Content Include="Content\images\logo\top-logo.png" />
+    <Content Include="Content\images\products\img1-2.jpg" />
+    <Content Include="Content\images\products\img1.jpg" />
+    <Content Include="Content\images\products\img10-2.jpg" />
+    <Content Include="Content\images\products\img10-3.jpg" />
+    <Content Include="Content\images\products\img10.jpg" />
+    <Content Include="Content\images\products\img11-2.jpg" />
+    <Content Include="Content\images\products\img11.jpg" />
+    <Content Include="Content\images\products\img12-2.jpg" />
+    <Content Include="Content\images\products\img12-3.jpg" />
+    <Content Include="Content\images\products\img12.jpg" />
+    <Content Include="Content\images\products\img13-2.jpg" />
+    <Content Include="Content\images\products\img13-3.jpg" />
+    <Content Include="Content\images\products\img13.jpg" />
+    <Content Include="Content\images\products\img14-2.jpg" />
+    <Content Include="Content\images\products\img14-3.jpg" />
+    <Content Include="Content\images\products\img14.jpg" />
+    <Content Include="Content\images\products\img15.jpg" />
+    <Content Include="Content\images\products\img16-2.jpg" />
+    <Content Include="Content\images\products\img16-3.jpg" />
+    <Content Include="Content\images\products\img16.jpg" />
+    <Content Include="Content\images\products\img17-2.jpg" />
+    <Content Include="Content\images\products\img17.jpg" />
+    <Content Include="Content\images\products\img2.jpg" />
+    <Content Include="Content\images\products\img3-2.jpg" />
+    <Content Include="Content\images\products\img3.jpg" />
+    <Content Include="Content\images\products\img4.jpg" />
+    <Content Include="Content\images\products\img5.jpg" />
+    <Content Include="Content\images\products\img6.jpg" />
+    <Content Include="Content\images\products\img7.jpg" />
+    <Content Include="Content\images\products\img8-2.jpg" />
+    <Content Include="Content\images\products\img8.jpg" />
+    <Content Include="Content\images\products\img9-2.jpg" />
+    <Content Include="Content\images\products\img9.jpg" />
+    <Content Include="Content\lightslider.css" />
+    <Content Include="Content\lightslider.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fa-brands-400.svg" />
@@ -202,6 +204,7 @@
     <Content Include="fonts\fa-solid-900.ttf" />
     <Content Include="fonts\fa-solid-900.woff" />
     <Content Include="fonts\fa-solid-900.woff2" />
+    <Content Include="data\product.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -212,6 +215,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lightslider.js" />
+    <Content Include="Scripts\lightslider.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\parallax.js" />
     <Content Include="Scripts\parallax.min.js" />
@@ -230,10 +235,10 @@
     <Content Include="Views\Home\Gallery.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\_MenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
