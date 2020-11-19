@@ -2,14 +2,14 @@
 
 <div class="container">
     <div id="menu-text" class="justify-content-md-center row">
-        <div class="col-md-auto col-4"><span class="menu-selected">Tout</span></div>
-        <div class="col-md-auto col-4"><span>Granola</span></div>
-        <div class="col-md-auto col-4"><span>Muffins</span></div>
-        <div class="col-md-auto col-4"><span>Energie</span></div>
-        <div class="col-md-auto col-4"><span>Beurre</span></div>
-        <div class="col-md-auto col-4"><span>Nutella</span></div>
-        <div class="col-md-auto col-4"><span>Sauce</span></div>
-        <div class="col-md-auto col-4"><span>Tarte</span></div>
+        <div class="col-md-auto col-4"><span class="menu-filter menu-selected" data-filter="all">Tout</span></div>
+        <div class="col-md-auto col-4"><span class="menu-filter" data-filter="granola">Granola</span></div>
+        <div class="col-md-auto col-4"><span class="menu-filter" data-filter="muffin">Muffins</span></div>
+        <div class="col-md-auto col-4"><span class="menu-filter" data-filter="energy">Energie</span></div>
+        <div class="col-md-auto col-4"><span class="menu-filter" data-filter="cream">Beurre</span></div>
+        <div class="col-md-auto col-4"><span class="menu-filter" data-filter="nutella">Nutella</span></div>
+        <div class="col-md-auto col-4"><span class="menu-filter" data-filter="sauce">Sauce</span></div>
+        <div class="col-md-auto col-4"><span class="menu-filter" data-filter="tarte">Tarte</span></div>
     </div>
 </div>
 <br />
@@ -18,7 +18,7 @@
     <div class="row">
         @foreach (var product in Model)
         {
-            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-4 col-sm-6 item-product item-@product.Category.ToLower()">
                 <a class="menu-item-link" href="/product/@product.Id">
                     <div class="menu-item">
                         <div class="img-area"><img src="~/Content/images/products/@product.Images[0]" alt="@product.Title" /></div>

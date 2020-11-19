@@ -138,6 +138,8 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fontawesome.min.css" />
+    <Content Include="Content\images\bg\img-bg1.jpg" />
+    <Content Include="Content\images\bg\img-bg2.jpg" />
     <Content Include="Content\images\lightslider\controls.png" />
     <Content Include="Content\images\logo\top-logo.png" />
     <Content Include="Content\images\products\img1-2.jpg" />
@@ -219,7 +221,6 @@
     <Content Include="Scripts\lightslider.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\parallax.js" />
-    <Content Include="Scripts\parallax.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -236,6 +237,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Product.cshtml" />
     <Content Include="Views\Home\_MenuPartial.cshtml" />
+    <Content Include="Views\Home\_FooterPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

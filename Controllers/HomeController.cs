@@ -13,22 +13,13 @@ namespace LightBakes.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Home = true;
             return View();
         }
 
         public ActionResult Menu()
         {
             return View();
-        }
-
-        public PartialViewResult _MenuPartial()
-        {
-            using (StreamReader file = System.IO.File.OpenText(@"C:\Users\E90037408\Desktop\Projects\Freelance\Lightbakes.Net\data\product.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                Product[] products = (Product[])serializer.Deserialize(file, typeof(Product[]));
-                return PartialView(products);
-            }
         }
 
         public ActionResult Product(string id)
@@ -58,6 +49,24 @@ namespace LightBakes.Controllers
         public ActionResult Panier()
         {
             return View();
+        }
+
+
+
+        public PartialViewResult _MenuPartial()
+        {
+            using (StreamReader file = System.IO.File.OpenText(@"C:\Users\E90037408\Desktop\Projects\Freelance\Lightbakes.Net\data\product.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                Product[] products = (Product[])serializer.Deserialize(file, typeof(Product[]));
+                return PartialView(products);
+            }
+        }
+
+
+        public PartialViewResult _FooterPartial()
+        {
+            return PartialView();
         }
     }
 }

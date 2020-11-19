@@ -1,4 +1,4 @@
-﻿<div class="react-parallax" data-parallax="scroll" data-image-src="/Content/images/bg/img-bg1.jpg">
+﻿<div class="parallax-section" data-image-src="/Content/images/bg/img-bg1.jpg">
     <div style="height: 500px">
         <div id="home">
             <h1 class="border-orange text-center">
@@ -9,6 +9,7 @@
             </span>
         </div>
     </div>
+    <div id="menu"></div>
 </div>
 
 <br />
@@ -17,10 +18,7 @@
 
 @{Html.RenderAction("_MenuPartial"); }
 
-
-
-@section Scripts {
-    <script src="~/Scripts/parallax.min.js"></script>
+@section Scripts {    
     <script>
         $(function () {
             function scrollHandler() {

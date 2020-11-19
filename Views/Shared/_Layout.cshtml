@@ -17,14 +17,19 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="header">
         <div class="container">
             <a class="navbar-brand nav-link" href="/"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" aria-controls="basic-navbar-nav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/Menu">Menu</a>
+                        @if (ViewBag.Home == true)
+                        {
+                            <a class="nav-link" href="#menu">Menu</a>
+                        }
+                        else
+                        { <a class="nav-link" href="/Menu">Menu</a>}
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -43,65 +48,28 @@
 
     @RenderBody()
 
-    <div id="contact-section">
-        <div class="react-parallax" data-parallax="scroll" data-image-src="/Content/images/bg/img-bg2.jpg">
-            <div id="contact" class="container">
-                <div class="row">
-                    <div id="contact-form" class="col-lg-6">
-                        <h1 class="text-center">Prenez contact</h1>
-                        <br />
-                        <form class="">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-group"><input name="name" placeholder="Nom et prénom" type="text" class="form-control" value="" /></div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-group"><input name="email" placeholder="Email" type="text" class="form-control" value="" /></div>
-                                </div>
-                            </div>
-                            <br />
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-group"><input name="tel" placeholder="Num. Tél" type="text" class="form-control" value="" /></div>
-                                </div>
-                            </div>
-                            <br />
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-group"><textarea rows="4" placeholder="Message..." name="message" class="form-control"></textarea></div>
-                                </div>
-                            </div>
-                            <br />
-                            <div class="row">
-                                <div class="col"><button type="button" class="btn btn-outline-primary btn-block btn-lg">Envoyer</button></div>
-                            </div>
-                        </form>
-                        <br />
-                        <div class="row">
-                            <div class="col-7">
-                                <p class="text-bold">
-                                    Suiver nous sur &nbsp;<a href="https://www.instagram.com/light.bakes/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram-square"></i> </a>
-                                    <a href="https://www.facebook.com/Lightbakes-104528938093690" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
-                                </p>
-                            </div>
-                            <div class="text-right text-bold col-5"><i class="fas fa-phone-alt"></i>&nbsp; 53 755 754</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <footer>
-        <div class="container">
-            <div class="col">© 2020 Light bakes, tout droit reservé</div>
-        </div>
-    </footer>
+    @{Html.RenderAction("_FooterPartial"); }
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     @RenderSection("styles", required: false)
-    <script src="~/Scripts/parallax.min.js"></script>
+    <script src="~/Scripts/parallax.js"></script>
+    <script>
+        $(function () {
+            $(".menu-filter").click(function () {
+                $(".menu-filter").removeClass("menu-selected");
+                $(this).addClass("menu-selected");
+                var filter = $(this).attr("data-filter");
+                if (filter == "all")
+                    $(".item-product").css({ "display": "block" });
+                else {
+                    $(".item-product").css({ "display": "none" });
+                    $(".item-" + filter).css({ "display": "block" });
+                }
+            });
+
+        });
+    </script>
 </body>
 </html>

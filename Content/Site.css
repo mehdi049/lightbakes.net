@@ -27,6 +27,10 @@ a,
         color: #b7522f;
     }
 
+    a.no-underline:hover {
+        text-decoration: none;
+    }
+
 .menu-selected {
     color: #cb7152;
     border-bottom: 2px solid #cb7152;
@@ -121,7 +125,7 @@ b {
 }
 
 .center-content {
-    margin-top: 120px;
+    margin-top: 150px;
     margin-bottom: 20px;
 }
 
@@ -230,8 +234,13 @@ b {
     }
 
 /** parallax section **/
-.react-parallax {
+.parallax-section {
     height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /** menu **/
@@ -316,6 +325,7 @@ footer {
 }
 
 /** home **/
+
 #home {
     width: 280px;
     color: white;
@@ -326,7 +336,7 @@ footer {
 }
 
 /** similar product **/
-#content-slider li.lslide {
+#content-slider li.lslide, #content-slider li.clone {
     max-width: 310px;
 }
 
@@ -365,7 +375,7 @@ footer {
         height: 170px;
     }
 
-    #contact-section .react-parallax {
+    #contact-section .parallax-section {
         max-height: 750px;
     }
 
@@ -376,7 +386,7 @@ footer {
 
 /** x-small screen **/
 @media (max-width: 576px) {
-    #contact-section .react-parallax {
+    #contact-section .parallax-section {
         height: 120vh;
         max-height: 650px;
     }
@@ -400,7 +410,7 @@ footer {
             margin-top: 10%;
         }
 
-        #contact-section .react-parallax {
+        #contact-section .parallax-section {
             height: 160vh;
         }
     }
@@ -410,7 +420,7 @@ footer {
             margin-top: 10%;
         }
 
-        #contact-section .react-parallax {
+        #contact-section .parallax-section {
             height: 160vh;
         }
     }
@@ -420,13 +430,13 @@ footer {
             margin-top: 10%;
         }
 
-        #contact-section .react-parallax {
+        #contact-section .parallax-section {
             height: 180vh;
         }
     }
 
     @media (min-device-width: 1200px) and (max-device-height: 1030px) {
-        #contact-section .react-parallax {
+        #contact-section .parallax-section {
             max-height: 670px;
         }
     }
