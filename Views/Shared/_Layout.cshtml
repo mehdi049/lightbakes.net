@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description"
+          content="Site de vente de produit healthy food sur commande" />
+    <meta name="keywords"
+          content="Healthy food, Tunisie, vente en ligne, vente healthy food en ligne, Beurre, Beurre de cacahuète, Beurre de sesame, Beurre de noisette, Beurre d'amandes, Beurre de cajou, Beurre de pistache, Beurre de noix, Cookies, Muffin, Brownies, Fondant, Boules d'energie, Energy, Granola, Granola bar, Sauce, Sauce pesto, tarte, Fonds de tartes" />
+    <title>Light bakes</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="header">
+        <div class="container">
+            <a class="navbar-brand nav-link" href="/"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Gallery">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="justify-content-end navbar-collapse collapse">
+                <a class="nav-link" href="/basket">Mon panier &nbsp;<i class="fas fa-shopping-basket"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <div id="contact-section">
+        <div class="react-parallax" data-parallax="scroll" data-image-src="/Content/images/img-bg2.jpg">
+            <div id="contact" class="container">
+                <div class="row">
+                    <div id="contact-form" class="col-lg-6">
+                        <h1 class="text-center">Prenez contact</h1>
+                        <br />
+                        <form class="">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group"><input name="name" placeholder="Nom et prénom" type="text" class="form-control" value="" /></div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group"><input name="email" placeholder="Email" type="text" class="form-control" value="" /></div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group"><input name="tel" placeholder="Num. Tél" type="text" class="form-control" value="" /></div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group"><textarea rows="4" placeholder="Message..." name="message" class="form-control"></textarea></div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col"><button type="button" class="btn btn-outline-primary btn-block btn-lg">Envoyer</button></div>
+                            </div>
+                        </form>
+                        <br />
+                        <div class="row">
+                            <div class="col-7">
+                                <p class="text-bold">
+                                    Suiver nous sur &nbsp;<a href="https://www.instagram.com/light.bakes/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram-square"></i> </a>
+                                    <a href="https://www.facebook.com/Lightbakes-104528938093690" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+                                </p>
+                            </div>
+                            <div class="text-right text-bold col-5"><i class="fas fa-phone-alt"></i>&nbsp; 53 755 754</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="col">© 2020 Light bakes, tout droit reservé</div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/parallax.min.js"></script>
+</body>
+</html>
