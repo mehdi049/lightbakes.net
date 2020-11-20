@@ -46,7 +46,7 @@ namespace LightBakes.Controllers
             return View();
         }
 
-        public ActionResult Panier()
+        public ActionResult Basket()
         {
             return View();
         }
