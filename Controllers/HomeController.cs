@@ -1,10 +1,7 @@
 ﻿using LightBakes.Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace LightBakes.Controllers
@@ -41,16 +38,10 @@ namespace LightBakes.Controllers
             }
         }
 
-        public ActionResult Gallery()
-        {
-            return View();
-        }
-
         public ActionResult Basket()
         {
             return View();
         }
-
 
         public PartialViewResult _MenuPartial()
         {

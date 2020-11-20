@@ -16,7 +16,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="header">
         <div class="container">
-            <a class="navbar-brand nav-link" href="/"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
+            @if (ViewBag.Home == true)
+            {
+                <a class="navbar-brand nav-link" href="#home"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
+            }
+            else
+            { 
+                <a class="navbar-brand nav-link" href="/"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
+            }
             <button class="navbar-toggler collapsed" type="button" aria-controls="basic-navbar-nav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,9 +40,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Gallery">Gallerie</a>
                     </li>
                 </ul>
             </div>
