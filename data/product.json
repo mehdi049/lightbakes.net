@@ -1,9 +1,9 @@
 [
   {
     "id": "1",
-    "title": "Beurre de cacahuète",
-    "description": "Ce beurre de cacahuètes a une haute teneur en protéine contribuant à la croissance et à l'entretien de la masse musculaire. <br/><br/> Cette pâte à tartiner est disponible en plusieurs  formats en texture onctueuse ou croustillante. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
-    "ingredient": "100% de cacahuètes entières grillées.",
+    "title": "Beurre de cacahuéte",
+    "description": "Ce beurre de cacahuétes a une haute teneur en protéine contribuant à la croissance et à l'entretien de la masse musculaire. <br/><br/> Cette pâte à tartiner est disponible en plusieurs  formats en texture onctueuse ou croustillante. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
+    "ingredient": "100% de cacahuétes entiéres grillées.",
     "nutritionalValue": "616 Kcal / 100 gr",
     "productOptions": [
       {
@@ -37,7 +37,7 @@
     "id": "2",
     "title": "Beurre de sesame",
     "description": "Cette pâte à tartiner  est une purée issue du broyage des graines de sésame. Riche en fibres et en oligoéléments, cet incontournable de la cuisine proche-orientale regorge de bienfaits pour la santé. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
-    "ingredient": "100% de sésame entières grillées.",
+    "ingredient": "100% de sésame entiéres grillées.",
     "nutritionalValue": "573 Kcal / 100 gr",
     "productOptions": [
       {
@@ -71,7 +71,7 @@
     "id": "3",
     "title": "Beurre de noisette",
     "description": "Le beurre de noisettes a un goût fantastique comme vous pourriez vous y attendre avec un beurre naturel, nous n'y ajoutons ni sucre, ni sel, ni conservateurs, ni huile de palme. <br/> Le beurre de noisettes regorge tout simplement de bienfaits naturels, c'est une excellente source de protéines et de fibres. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
-    "ingredient": "100% de noisette entières grillées.",
+    "ingredient": "100% de noisette entiéres grillées.",
     "nutritionalValue": "654 Kcal / 100 gr",
     "productOptions": [
       {
@@ -104,7 +104,7 @@
   {
     "id": "4",
     "title": "Beurre d'amandes",
-    "description": "Le beurre d'amande est tout simplement un beurre 100 % naturel, préparé uniquement avec des amandes. <br/><br/> Le beurre d'amandes est une parfaite addition pour tout régime alimentaire, et il est particulièrement utile comme snack, sain et riche en protéines, à consommer entre les repas. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
+    "description": "Le beurre d'amande est tout simplement un beurre 100 % naturel, préparé uniquement avec des amandes. <br/><br/> Le beurre d'amandes est une parfaite addition pour tout régime alimentaire, et il est particuliérement utile comme snack, sain et riche en protéines, à consommer entre les repas. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
     "ingredient": "100% d'amandes émondées.",
     "nutritionalValue": "612 Kcal / 100 gr",
     "productOptions": [
@@ -138,8 +138,8 @@
   {
     "id": "5",
     "title": "Beurre de cajou",
-    "description": "Le beurre de cajou est tout simplement un beurre délicieux 100 % naturel, préparé uniquement avec des noix de cajou. <br/><br/> On appelle souvent les noix de cajou le 'comprimé de vitamines naturel', car elles regorgent de vitamines et de minéraux comme le fer, le phosphore, le zinc, le cuivre et le manganèse. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
-    "ingredient": "100% noix de cajou entières grillées.",
+    "description": "Le beurre de cajou est tout simplement un beurre délicieux 100 % naturel, préparé uniquement avec des noix de cajou. <br/><br/> On appelle souvent les noix de cajou le 'comprimé de vitamines naturel', car elles regorgent de vitamines et de minéraux comme le fer, le phosphore, le zinc, le cuivre et le manganése. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
+    "ingredient": "100% noix de cajou entiéres grillées.",
     "nutritionalValue": "576 Kcal / 100 gr",
     "productOptions": [
       {
@@ -172,7 +172,7 @@
   {
     "id": "6",
     "title": "Beurre de pistache",
-    "description": "La pâte de pistache est 100% naturelle et ne contient que des pistaches rôties. Ce beurre de pistache n'est pas que naturel et délicieux, il a aussi une haute teneur en protéine et en graisses mono-insaturées sans aucun sucre, additif, sel ou huile de plame. Cette crème est aussi riche en vitamines et minéraux. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
+    "description": "La pâte de pistache est 100% naturelle et ne contient que des pistaches rôties. Ce beurre de pistache n'est pas que naturel et délicieux, il a aussi une haute teneur en protéine et en graisses mono-insaturées sans aucun sucre, additif, sel ou huile de plame. Cette créme est aussi riche en vitamines et minéraux. <br/><br/> <u class='text-small'>Remarque:</u> <span class='text-small'> Ce produit peut subir un certain degré de séparation, laissant une couche d'huile sur la surface. Cette séparation est parfaitement naturelle, et il vous suffit de mélanger le produit pour y remédier.</span>",
     "ingredient": "100% de pistaches rôties.",
     "nutritionalValue": "615 Kcal / 100 gr",
     "productOptions": [
@@ -242,7 +242,7 @@
     "id": "8",
     "title": "Cookies",
     "description": "Cookie un jour cookie toujours! On ne refuse jamais de délicieux, healthy et crunchy cookies pour le gouter avec flocons d'avoine et fruits secs. <br/><br/>Yummy irrésistible!",
-    "ingredient": "Amande, noisette, cacahuète, beurre d'amande, beurre de noisette, blanc d'oeuf.",
+    "ingredient": "Amande, noisette, cacahuéte, beurre d'amande, beurre de noisette, blanc d'oeuf.",
     "productOptions": [
       {
         "option": "avec miel",
@@ -259,7 +259,7 @@
     ],
     "unityOptions": [
       {
-        "unity": "1 grande pièce",
+        "unity": "1 grande piéce",
         "price": 1.8
       },
       {
@@ -301,7 +301,7 @@
     ],
     "unityOptions": [
       {
-        "unity": "1 pièce",
+        "unity": "1 piéce",
         "price": 1.5
       }
     ],
@@ -312,7 +312,7 @@
   {
     "id": "10",
     "title": "Brownies",
-    "description": "Délicieux, entièrement naturel et fait avec amour. <br/> Parfait pour les cadeaux clients, les cadeaux d'anniversaire.",
+    "description": "Délicieux, entiérement naturel et fait avec amour. <br/> Parfait pour les cadeaux clients, les cadeaux d'anniversaire.",
     "ingredient": "Cacao, farine d’avoine, huile de coco/colza, blanc d’oeuf, lait.",
     "nutritionalValue": "466 Kcal / 100 gr",
     "productOptions": [
@@ -331,7 +331,7 @@
     ],
     "unityOptions": [
       {
-        "unity": "1 pièce",
+        "unity": "1 piéce",
         "price": 1.5
       }
     ],
@@ -342,7 +342,7 @@
   {
     "id": "11",
     "title": "Fondant",
-    "description": "Ah! le fameux fondant au chocolat... celui qui est capable de flinguer n'importe lequel de nos régimes tellement il est irrésistible! <br/><br/> Eh bien, c'est bel et bien fini ce temps-là, puisqu'on vous a trouvé une recette healthy, légère et sans matière grasse, plus aucune raison de se priver!",
+    "description": "Ah! le fameux fondant au chocolat... celui qui est capable de flinguer n'importe lequel de nos régimes tellement il est irrésistible! <br/><br/> Eh bien, c'est bel et bien fini ce temps-là, puisqu'on vous a trouvé une recette healthy, légére et sans matiére grasse, plus aucune raison de se priver!",
     "ingredient": "Cacao, farine d'avoine, huile de colza, blanc d'oeuf.",
     "nutritionalValue": "338 Kcal / 100 gr",
     "productOptions": [
@@ -361,7 +361,7 @@
     ],
     "unityOptions": [
       {
-        "unity": "1 pièce",
+        "unity": "1 piéce",
         "price": 1.5
       }
     ],
@@ -372,8 +372,8 @@
   {
     "id": "12",
     "title": "Boules d'energie",
-    "description": "Ces boules d'énergie sont particulièrement intéressantes d'un point de vue nutritif car elles contiennent une forte proportion de protéines.",
-    "ingredient": "Amande, cacahuète, beurre d'amande beurre de cacahuètes, enrobé par caco et huile de coco",
+    "description": "Ces boules d'énergie sont particuliérement intéressantes d'un point de vue nutritif car elles contiennent une forte proportion de protéines.",
+    "ingredient": "Amande, cacahuéte, beurre d'amande beurre de cacahuétes, enrobé par caco et huile de coco",
     "nutritionalValue": "55 Kcal / boule",
     "productOptions": [
       {
@@ -391,7 +391,7 @@
     ],
     "unityOptions": [
       {
-        "unity": "1 pièce",
+        "unity": "1 piéce",
         "price": 2.5
       },
       {
@@ -415,7 +415,7 @@
     "id": "13",
     "title": "Granola standard",
     "description": "Enfin des mix de granola plein de goûts et de nutriments mais sans sucre raffiné. <br><br/>  Miel ou de sucre de dattes sur un max de fruits secs et de flocons pour un max d'énergie!",
-    "ingredient": "Flocons d'avoine, noisette, amande, noix n noix de cajou, sésame, cacahuète, graine de laine, graine de citrouille, graine de tournesol.",
+    "ingredient": "Flocons d'avoine, noisette, amande, noix n noix de cajou, sésame, cacahuéte, graine de laine, graine de citrouille, graine de tournesol.",
     "productOptions": [
       {
         "option": "avec miel",
@@ -452,7 +452,7 @@
     "id": "14",
     "title": "Granola bar",
     "description": "De délicieuses barres aux fruits secs et flocons d'avoine, nappées de chocolat.",
-    "ingredient": "Flocons d'avoine, noisette, amande, noix n noix de cajou, sésame, cacahuète, graine de laine, grain de citrouille, graine de tournesol, beure d'amande et beurre de miel.",
+    "ingredient": "Flocons d'avoine, noisette, amande, noix n noix de cajou, sésame, cacahuéte, graine de laine, grain de citrouille, graine de tournesol, beure d'amande et beurre de miel.",
     "nutritionalValue": "471 Kcal / 100 gr",
     "productOptions": [
       {
@@ -470,7 +470,7 @@
     ],
     "unityOptions": [
       {
-        "unity": "1 pièce",
+        "unity": "1 piéce",
         "price": 2.5
       }
     ],
@@ -506,8 +506,8 @@
   {
     "id": "16",
     "title": "Fonds de tartes",
-    "description": "Pate à  farine complète ou farine d'avoine, idéale pour des tartes sucrées ou salées et surtout healthy.",
-    "ingredient": "Farine complète ou farine d'avoine, huile d'olive ou huile de colza.",
+    "description": "Pate à  farine compléte ou farine d'avoine, idéale pour des tartes sucrées ou salées et surtout healthy.",
+    "ingredient": "Farine compléte ou farine d'avoine, huile d'olive ou huile de colza.",
     "productOptions": [
       {
         "option": "Basilic séché",
@@ -528,15 +528,15 @@
     ],
     "unityOptions": [
       {
-        "unity": "8 pièce X 6 cm",
+        "unity": "8 piéce X 6 cm",
         "price": 3
       },
       {
-        "unity": "4 pièce X 8.5 cm",
+        "unity": "4 piéce X 8.5 cm",
         "price": 2.5
       },
       {
-        "unity": "1 pièce X 18 cm",
+        "unity": "1 piéce X 18 cm",
         "price": 3.5
       }
     ],

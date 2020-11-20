@@ -29,7 +29,7 @@ namespace LightBakes.Controllers
                 JsonSerializer serializer = new JsonSerializer();
                 Product[] products = (Product[])serializer.Deserialize(file, typeof(Product[]));
                 Product product = products.Where(x => x.Id == id).FirstOrDefault();
-
+                ViewBag.ProductJson = JsonConvert.SerializeObject(product);
                 ViewBag.SimilarProducts = null;
                 Product[] similarProducts = products.Where(x => x.Category == product.Category).ToArray();
                 if (similarProducts.Length > 1)
