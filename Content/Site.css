@@ -71,6 +71,10 @@ b {
     display: block;
 }
 
+.text-right {
+    text-align: right;
+}
+
 .inline-block {
     display: inline-block;
 }

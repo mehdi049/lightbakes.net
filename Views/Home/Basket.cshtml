@@ -31,13 +31,50 @@
                     </tbody>
                 </table>
             </div>
-            <p class="text-italic">
-                <i class="fas fa-truck"></i>&nbsp; <b>Paiement à la livraison.</b>
-                <br><br>
-                <b>Note:</b> Le panier sera réinitialisé aprés le passage de la commande.
-            </p>
-            <div class="text-right">
-                <button type="button" class="btn btn-outline-primary">Passer la commande</button>
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+                    <p class="text-italic">
+                        <i class="fas fa-truck"></i>&nbsp; <b>Paiement à la livraison.</b>
+                        <br><br>
+                        <b>Note:</b> Le panier sera réinitialisé aprés le passage de la commande.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="text-right">
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#customer-info-popup">Passer la commande</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="customer-info-popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmer la commande</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input placeholder="Nom et prénom / nom de l'entreprise" id="name" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input placeholder="Email" id="email" type="email" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input placeholder="Num. Tél" id="tel" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Adresse" id="address" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-outline-primary" id="submit-order">Confirmer</button>
             </div>
         </div>
     </div>
@@ -50,6 +87,7 @@
         $(function () {
             $("#header").addClass("header-black-bg");
 
+            /** load basket */
             function redrawTable() {
                 var basketItem = localStorage.getItem("basket") !== null
                     ? JSON.parse(localStorage.getItem("basket"))
@@ -90,7 +128,7 @@
 
             redrawTable();
 
-
+            /** remove item from basket */
             function removeBasketItem(id) {
                 var basketItem = JSON.parse(localStorage.getItem("basket"));
                 var itemsAfterRemove = basketItem.filter((x) => x.Id !== id);
@@ -102,9 +140,114 @@
                     showHideTransition: 'plain',
                     hideAfter: 5000,
                     icon: 'success',
-                    position: 'top-right'
+                    position: 'top-right',
+                    loader: false
                 });
             }
+
+            /** load customer info **/
+            function loadCustomerInfo() {
+                var customerInfo = localStorage.getItem("customerInfo") !== null
+                    ? JSON.parse(localStorage.getItem("customerInfo"))
+                    : {
+                        name: "",
+                        email: "",
+                        tel: "",
+                        address: "",
+                    };
+
+                $("#name").val(customerInfo.name);
+                $("#email").val(customerInfo.email);
+                $("#tel").val(customerInfo.tel);
+                $("#address").val(customerInfo.address);
+            }
+            loadCustomerInfo();
+
+            /** submit order */
+            $("#submit-order").click(function () {
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var tel = $("#tel").val();
+                var address = $("#address").val();
+
+                if (name === "") {
+                    $.toast({
+                        text: "Le champ 'Nom et prénom' est requis",
+                        showHideTransition: 'plain',
+                        hideAfter: 5000,
+                        icon: 'error',
+                        position: 'top-right',
+                        loader: false,
+                    });
+                    return;
+                }
+                if (email === "") {
+                    $.toast({
+                        text: "Le champ 'Email' est requis",
+                        showHideTransition: 'plain',
+                        hideAfter: 5000,
+                        icon: 'error',
+                        position: 'top-right',
+                        loader: false
+                    });
+                    return;
+                }
+                if (tel === "") {
+                    $.toast({
+                        text: "Le champ 'Num.Tél' est requis.",
+                        showHideTransition: 'plain',
+                        hideAfter: 5000,
+                        icon: 'error',
+                        position: 'top-right',
+                        loader: false
+                    });
+                    return;
+                }
+                if (address === "") {
+                    $.toast({
+                        text: "Le champ 'Adresse' est requis.",
+                        showHideTransition: 'plain',
+                        hideAfter: 5000,
+                        icon: 'error',
+                        position: 'top-right',
+                        loader: false
+                    });
+                    return;
+                }
+
+                var customerInfo = {
+                    name: name,
+                    email: email,
+                    tel: tel,
+                    address: address
+                };
+
+                localStorage.setItem("customerInfo", JSON.stringify(customerInfo));
+
+                var sent = false;
+                if (sent == true) {
+                    localStorage.removeItem("basket");
+                    redrawTable();
+                    $('#customer-info-popup').modal('hide');
+                    $.toast({
+                        text: "Commande envoyée avec succés.",
+                        showHideTransition: 'plain',
+                        hideAfter: 5000,
+                        icon: 'success',
+                        position: 'top-right',
+                        loader: false
+                    });
+                } else {
+                    $.toast({
+                        text: "Une erreur s'est produite, veuillez réessayer.",
+                        showHideTransition: 'plain',
+                        hideAfter: 5000,
+                        icon: 'error',
+                        position: 'top-right',
+                        loader: false
+                    });
+                }
+            });
 
         });
     </script>
