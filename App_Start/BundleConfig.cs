@@ -25,6 +25,7 @@ namespace LightBakes
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/fontawesome.css",
                       "~/Content/bootstrap.css",
+                      "~/Content/jquery.toast.min.css",
                       "~/Content/site.css"));
         }
     }

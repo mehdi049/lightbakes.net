@@ -55,6 +55,8 @@
     @RenderSection("scripts", required: false)
     @RenderSection("styles", required: false)
     <script src="~/Scripts/parallax.js"></script>
+    <script src="~/Scripts/jquery.toast.min.js"></script>
+    <!-- menu-filter.js -->
     <script>
         $(function () {
             $(".menu-filter").click(function () {
@@ -68,7 +70,6 @@
                     $(".item-" + filter).css({ "display": "block" });
                 }
             });
-
         });
     </script>
 </body>

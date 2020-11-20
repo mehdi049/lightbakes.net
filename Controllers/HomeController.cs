@@ -52,7 +52,6 @@ namespace LightBakes.Controllers
         }
 
 
-
         public PartialViewResult _MenuPartial()
         {
             using (StreamReader file = System.IO.File.OpenText(@"C:\Users\E90037408\Desktop\Projects\Freelance\Lightbakes.Net\data\product.json"))
@@ -63,10 +62,10 @@ namespace LightBakes.Controllers
             }
         }
 
-
         public PartialViewResult _FooterPartial()
         {
             return PartialView();
         }
+
     }
 }

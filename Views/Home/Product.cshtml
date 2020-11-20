@@ -117,6 +117,7 @@
 
 @section Scripts {
     <script src="~/Scripts/lightslider.js"></script>
+    <!-- product.js -->
     <script>
         $(function () {
             $("#header").addClass("header-black-bg");
@@ -140,10 +141,18 @@
             });
 
             $("#order-form .form-control").change(function () {
+                $("#submit-btn").attr("disabled", false);
                 var quantity = $("#quantity").val();
-                if (isNaN(quantity) || quantity.indexOf(",") !== -1 || quantity.indexOf(".") !== -1 || parseInt(quantity) <= 0) {
-                    $("#quantity").val("1");
-                    return alert("Quantité incorrecte");
+                if (quantity=="" || isNaN(quantity) || quantity.indexOf(",") !== -1 || quantity.indexOf(".") !== -1 || parseInt(quantity) <= 0) {
+                    $.toast({
+                        text: 'Quantité incorrecte.',
+                        showHideTransition: 'plain',
+                        hideAfter: 5000,
+                        icon: 'error',
+                        position: 'top-right'
+                    });
+                    $("#submit-btn").attr("disabled", true);
+                    return;
                 }
 
                 var unityOptionPrice = $("#price-option").val();
@@ -171,6 +180,13 @@
                 return JSON.parse(product);
             }
 
+            function UUID() {
+                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                    return v.toString(16);
+                });
+            }
+
             $("#submit-btn").click(function () {
 
                 var product = getProduct();
@@ -188,18 +204,18 @@
 
                     var productsToAddCheck = productsToAdd.filter(
                         (x) =>
-                            x.Id === product.Id &&
+                            x.ProductId === product.Id &&
                             x.Option.toLowerCase() === selectedProductOption.toLowerCase() &&
                             x.Unity.toLowerCase() === productUnity.toLowerCase()
                     );
 
                 var quantity = $("#quantity").val();
                 var totalPrice = $("#total-price").html();
-                    if (quantity === "") return alert("Quantité incorrecte");
 
                     if (productsToAddCheck.length === 0)
                         productsToAdd.push({
-                            Id: product.Id,
+                            Id: UUID(),
+                            ProductId: product.Id,
                             Product: product.Title,
                             Unity: productUnity,
                             Option: selectedProductOption,
@@ -209,12 +225,13 @@
                     else {
                         var foundIndex = productsToAdd.findIndex(
                             (x) =>
-                                x.Id === product.Id &&
+                                x.ProductId === product.Id &&
                                 x.Option.toLowerCase() === selectedProductOption.toLowerCase() &&
                                 x.Unity.toLowerCase() === productUnity.toLowerCase()
                         );
                         productsToAdd[foundIndex] = {
-                            Id: product.Id,
+                            Id: UUID(),
+                            ProductId: product.Id,
                             Product: product.Title,
                             Unity: productUnity,
                             Option: selectedProductOption,
@@ -223,8 +240,14 @@
                         };
                 }
 
-                    localStorage.setItem("basket", JSON.stringify(productsToAdd));
-                    alert("Produit ajouté au panier avec succés.");
+                localStorage.setItem("basket", JSON.stringify(productsToAdd));
+                $.toast({
+                    text: 'Produit ajouté au panier avec succés.',
+                    showHideTransition: 'plain',
+                    hideAfter: 5000,
+                    icon: 'success',
+                    position: 'top-right'
+                });
             });
 
         });

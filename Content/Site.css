@@ -57,6 +57,11 @@ b {
     font-style: italic;
 }
 
+.hide
+{
+    display: none;
+}
+
 .container-small {
     width: 1000px;
 }
@@ -140,54 +145,6 @@ b {
     cursor: pointer;
 }
 
-.toast {
-    position: fixed;
-    right: 10px;
-    top: 30px;
-    width: 400px;
-    z-index: 9999;
-}
-
-.toast-header {
-    padding: 0rem 0.75rem;
-    border-bottom: none;
-}
-
-.toast-danger,
-.toast-danger .toast-header {
-    background: #ec5858;
-}
-
-    .toast-danger *,
-    .toast-danger .toast-header *,
-    .toast-success *,
-    .toast-success .toast-header * {
-        color: white;
-    }
-
-.toast-success,
-.toast-success .toast-header {
-    background: #2ea036;
-}
-
-.toast-warning,
-.toast-warning .toast-header {
-    background: #ffff66;
-}
-
-.toast-header button span {
-    cursor: pointer;
-}
-
-.toast-body {
-    padding-top: 0px;
-}
-
-    .toast-body p {
-        line-height: 25px;
-        margin: 0px;
-    }
-
 .alert-info {
     color: #ffffff;
     background-color: #168ba1;
@@ -196,6 +153,11 @@ b {
 
 .alert {
     border-radius: 0px;
+}
+
+.jq-toast-wrap
+{
+    width: 300px;
 }
 
 /** header **/
@@ -389,14 +351,6 @@ footer {
     #contact-section .parallax-section {
         height: 120vh;
         max-height: 650px;
-    }
-
-    .toast {
-        position: fixed;
-        right: 0px;
-        left: 1%;
-        top: 30px;
-        width: 100%;
     }
 
     .img-area {
