@@ -60,16 +60,16 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <input placeholder="Nom et prénom / nom de l'entreprise" id="name" type="text" class="form-control" />
+                    <input id="customer-name" placeholder="Nom et prénom / nom de l'entreprise" type="text" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <input placeholder="Email" id="email" type="email" class="form-control" />
+                    <input id="customer-email" placeholder="Email" type="email" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <input placeholder="Num. Tél" id="tel" type="text" class="form-control" />
+                    <input id="customer-tel" placeholder="Num. Tél" type="text" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <textarea rows="5" placeholder="Adresse" id="address" class="form-control"></textarea>
+                    <textarea id="customer-address" rows="5" placeholder="Adresse" class="form-control"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
@@ -156,19 +156,19 @@
                         address: "",
                     };
 
-                $("#name").val(customerInfo.name);
-                $("#email").val(customerInfo.email);
-                $("#tel").val(customerInfo.tel);
-                $("#address").val(customerInfo.address);
+                $("#customer-name").val(customerInfo.name);
+                $("#customer-email").val(customerInfo.email);
+                $("#customer-tel").val(customerInfo.tel);
+                $("#customer-address").val(customerInfo.address);
             }
             loadCustomerInfo();
 
             /** submit order */
             $("#submit-order").click(function () {
-                var name = $("#name").val();
-                var email = $("#email").val();
-                var tel = $("#tel").val();
-                var address = $("#address").val();
+                var name = $("#customer-name").val();
+                var email = $("#customer-email").val();
+                var tel = $("#customer-tel").val();
+                var address = $("#customer-address").val();
 
                 if (name === "") {
                     $.toast({
