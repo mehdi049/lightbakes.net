@@ -21,7 +21,7 @@
                 <a class="navbar-brand nav-link" href="#home"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
             }
             else
-            { 
+            {
                 <a class="navbar-brand nav-link" href="/"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
             }
             <button class="navbar-toggler collapsed" type="button" aria-controls="basic-navbar-nav" aria-label="Toggle navigation">
@@ -36,7 +36,9 @@
                             <a class="nav-link" href="#menu">Menu</a>
                         }
                         else
-                        { <a class="nav-link" href="/Menu">Menu</a>}
+                        {
+                            <a class="nav-link" href="/Menu">Menu</a>
+                        }
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -130,30 +132,57 @@
                     return;
                 }
 
-                var sent = true;
-                if (sent == true) {
-                    $.toast({
-                        text: "Email envoyé avec succés.",
-                        showHideTransition: 'plain',
-                        hideAfter: 5000,
-                        icon: 'success',
-                        position: 'top-right',
-                        loader: false
-                    });
-                    $("#contact-name").val("");
-                    $("#contact-email").val("");
-                    $("#contact-tel").val("");
-                    $("#contact-message").val("");
-                } else {
-                    $.toast({
-                        text: "Une erreur s'est produite, veuillez réessayer.",
-                        showHideTransition: 'plain',
-                        hideAfter: 5000,
-                        icon: 'error',
-                        position: 'top-right',
-                        loader: false
-                    });
-                }
+                var contactInfo = {
+                    Name: name,
+                    Email: email,
+                    Tel: tel,
+                    Message: message
+                };
+
+                $.ajax({
+                    method: "POST",
+                    data: { contact: JSON.stringify(contactInfo) },
+                    url: "ctr/Email/Contact",
+                    beforeSend: function () {
+                        $("#submit-contact").attr("disabled", true);
+                    }, success: function (data) {
+                        if (data == "True") {
+                            $.toast({
+                                text: "Email envoyé avec succés.",
+                                showHideTransition: 'plain',
+                                hideAfter: 5000,
+                                icon: 'success',
+                                position: 'top-right',
+                                loader: false
+                            });
+                            $("#contact-name").val("");
+                            $("#contact-email").val("");
+                            $("#contact-tel").val("");
+                            $("#contact-message").val("");
+                        } else {
+                            $.toast({
+                                text: "Une erreur s'est produite, veuillez réessayer.",
+                                showHideTransition: 'plain',
+                                hideAfter: 5000,
+                                icon: 'error',
+                                position: 'top-right',
+                                loader: false
+                            });
+                        }
+                        $("#submit-contact").attr("disabled", false);
+                    }, error: function () {
+                        $.toast({
+                            text: "Une erreur s'est produite, veuillez réessayer.",
+                            showHideTransition: 'plain',
+                            hideAfter: 5000,
+                            icon: 'error',
+                            position: 'top-right',
+                            loader: false
+                        });
+                        $("#submit-contact").attr("disabled", false);
+                    }
+                });
+
             });
         });
     </script>

@@ -224,29 +224,54 @@
 
                 localStorage.setItem("customerInfo", JSON.stringify(customerInfo));
 
-                var sent = false;
-                if (sent == true) {
-                    localStorage.removeItem("basket");
-                    redrawTable();
-                    $('#customer-info-popup').modal('hide');
-                    $.toast({
-                        text: "Commande envoyée avec succés.",
-                        showHideTransition: 'plain',
-                        hideAfter: 5000,
-                        icon: 'success',
-                        position: 'top-right',
-                        loader: false
-                    });
-                } else {
-                    $.toast({
-                        text: "Une erreur s'est produite, veuillez réessayer.",
-                        showHideTransition: 'plain',
-                        hideAfter: 5000,
-                        icon: 'error',
-                        position: 'top-right',
-                        loader: false
-                    });
-                }
+                var basketItem = JSON.parse(localStorage.getItem("basket"));
+
+                $.ajax({
+                    method: "POST",
+                    data: {
+                        Orders: JSON.stringify(basketItem),
+                        CustomerInfo: JSON.stringify(customerInfo),
+                    },
+                    url: "ctr/Email/SendOrder",
+                    beforeSend: function () {
+                        $("#submit-order").attr("disabled", true);
+                    }, success: function (data) {
+                        if (data == "True") {
+                            //localStorage.removeItem("basket");
+                            //redrawTable();
+                            $('#customer-info-popup').modal('hide');
+                            $.toast({
+                                text: "Commande envoyée avec succés.",
+                                showHideTransition: 'plain',
+                                hideAfter: 5000,
+                                icon: 'success',
+                                position: 'top-right',
+                                loader: false
+                            });
+                        } else {
+                            $.toast({
+                                text: "Une erreur s'est produite, veuillez réessayer.",
+                                showHideTransition: 'plain',
+                                hideAfter: 5000,
+                                icon: 'error',
+                                position: 'top-right',
+                                loader: false
+                            });
+                        }
+                        $("#submit-order").attr("disabled", false);
+                    }, error: function () {
+                        $.toast({
+                            text: "Une erreur s'est produite, veuillez réessayer.",
+                            showHideTransition: 'plain',
+                            hideAfter: 5000,
+                            icon: 'error',
+                            position: 'top-right',
+                            loader: false
+                        });
+                        $("#submit-order").attr("disabled", false);
+                    }
+                });
+
             });
 
         });

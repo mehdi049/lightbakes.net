@@ -14,9 +14,15 @@ namespace LightBakes
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
+                name: "withoutController",
                 url: "{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "default",
+                url: "ctr/{controller}/{action}/{id}",
+                defaults: new {action = "Index", id = UrlParameter.Optional }
             );
         }
     }
