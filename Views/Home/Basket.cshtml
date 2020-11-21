@@ -237,8 +237,8 @@
                         $("#submit-order").attr("disabled", true);
                     }, success: function (data) {
                         if (data == "True") {
-                            //localStorage.removeItem("basket");
-                            //redrawTable();
+                            localStorage.removeItem("basket");
+                            redrawTable();
                             $('#customer-info-popup').modal('hide');
                             $.toast({
                                 text: "Commande envoyée avec succés.",
