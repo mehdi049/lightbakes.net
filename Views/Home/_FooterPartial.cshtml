@@ -6,6 +6,7 @@
                     <h1 class="text-center">Prenez contact</h1>
                     <br />
                     <form class="">
+                        @Html.AntiForgeryToken()
                         <div class="row">
                             <div class="col">
                                 <div class="form-group"><input id="contact-name" placeholder="Nom et prénom" type="text" class="form-control" value="" /></div>

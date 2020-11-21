@@ -21,11 +21,14 @@ namespace LightBakes.Controllers
 
         public ActionResult Product(string id)
         {
-            using (StreamReader file = System.IO.File.OpenText(@"C:\Users\E90037408\Desktop\Projects\Freelance\Lightbakes.Net\data\product.json"))
+            string path = Server.MapPath("~/data/product.json");
+            using (StreamReader file = System.IO.File.OpenText(path))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 Product[] products = (Product[])serializer.Deserialize(file, typeof(Product[]));
                 Product product = products.Where(x => x.Id == id).FirstOrDefault();
+                if (product == null)
+                   return RedirectToAction("Index");
                 ViewBag.ProductJson = JsonConvert.SerializeObject(product);
                 ViewBag.SimilarProducts = null;
                 Product[] similarProducts = products.Where(x => x.Category == product.Category).ToArray();
@@ -45,7 +48,8 @@ namespace LightBakes.Controllers
 
         public PartialViewResult _MenuPartial()
         {
-            using (StreamReader file = System.IO.File.OpenText(@"C:\Users\E90037408\Desktop\Projects\Freelance\Lightbakes.Net\data\product.json"))
+            string path = Server.MapPath("~/data/product.json");
+            using (StreamReader file = System.IO.File.OpenText(path))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 Product[] products = (Product[])serializer.Deserialize(file, typeof(Product[]));

@@ -141,7 +141,7 @@
 
                 $.ajax({
                     method: "POST",
-                    data: { contact: JSON.stringify(contactInfo) },
+                    data: { contact: JSON.stringify(contactInfo), __RequestVerificationToken: $("input[name=__RequestVerificationToken]").val() },
                     url: "ctr/Email/Contact",
                     beforeSend: function () {
                         $("#submit-contact").attr("disabled", true);

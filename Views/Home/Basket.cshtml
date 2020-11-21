@@ -59,18 +59,21 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="form-group">
-                    <input id="customer-name" placeholder="Nom et prénom / nom de l'entreprise" type="text" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <input id="customer-email" placeholder="Email" type="email" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <input id="customer-tel" placeholder="Num. Tél" type="text" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <textarea id="customer-address" rows="5" placeholder="Adresse" class="form-control"></textarea>
-                </div>
+                <form>
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <input id="customer-name" placeholder="Nom et prénom / nom de l'entreprise" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input id="customer-email" placeholder="Email" type="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input id="customer-tel" placeholder="Num. Tél" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <textarea id="customer-address" rows="5" placeholder="Adresse" class="form-control"></textarea>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
@@ -231,6 +234,7 @@
                     data: {
                         Orders: JSON.stringify(basketItem),
                         CustomerInfo: JSON.stringify(customerInfo),
+                        __RequestVerificationToken: $("input[name=__RequestVerificationToken]").val()
                     },
                     url: "ctr/Email/SendOrder",
                     beforeSend: function () {

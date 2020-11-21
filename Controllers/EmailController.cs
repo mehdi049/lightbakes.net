@@ -15,6 +15,7 @@ namespace LightBakes.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public bool Contact(FormCollection collection)
         {
             try
@@ -37,6 +38,7 @@ namespace LightBakes.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public bool SendOrder(FormCollection collection)
         {
             try
