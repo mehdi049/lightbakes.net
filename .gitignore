@@ -8,5 +8,6 @@ nuget-packages
 _Resharper*
 bin/
 obj/
+packages/*
 *.DotSettings
 lib
