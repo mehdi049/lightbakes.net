@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="header">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="header">
         <div class="container">
             @if (ViewBag.Home == true)
             {
@@ -43,9 +43,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item d-block d-md-none">
+                        <a class="nav-link" href="/basket">Mon panier &nbsp;<i class="fas fa-shopping-basket"></i></a>
+                    </li>
                 </ul>
             </div>
-
             <div class="justify-content-end navbar-collapse collapse">
                 <a class="nav-link" href="/basket">Mon panier &nbsp;<i class="fas fa-shopping-basket"></i></a>
             </div>
