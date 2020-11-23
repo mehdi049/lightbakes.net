@@ -24,11 +24,11 @@
             {
                 <a class="navbar-brand nav-link" href="/"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
             }
-            <button class="navbar-toggler collapsed" type="button" aria-controls="basic-navbar-nav" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         @if (ViewBag.Home == true)
