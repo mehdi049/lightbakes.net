@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,7 +8,7 @@
           content="Site de vente de produit healthy food sur commande" />
     <meta name="keywords"
           content="Healthy food, Tunisie, vente en ligne, vente healthy food en ligne, Beurre, Beurre de cacahuète, Beurre de sesame, Beurre de noisette, Beurre d'amandes, Beurre de cajou, Beurre de pistache, Beurre de noix, Cookies, Muffin, Brownies, Fondant, Boules d'energie, Energy, Granola, Granola bar, Sauce, Sauce pesto, tarte, Fonds de tartes" />
-    <title>Light bakes</title>
+    <title>@ViewBag.PageTitle</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -18,11 +18,11 @@
         <div class="container">
             @if (ViewBag.Home == true)
             {
-                <a class="navbar-brand nav-link" href="#home"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
+                <a class="navbar-brand nav-link" href="#home"><img src="~/Content/images/logo/logo.svg" id="logo" alt="logo" /></a>
             }
             else
             {
-                <a class="navbar-brand nav-link" href="/"><img src="~/Content/images/logo/top-logo.png" alt="logo" /></a>
+                <a class="navbar-brand nav-link" href="/"><img src="~/Content/images/logo/logo.svg" id="logo" alt="logo" /></a>
             }
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

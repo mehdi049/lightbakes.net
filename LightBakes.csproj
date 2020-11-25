@@ -190,7 +190,7 @@
     <Content Include="Content\images\bg\img-bg1.jpg" />
     <Content Include="Content\images\bg\img-bg2.jpg" />
     <Content Include="Content\images\lightslider\controls.png" />
-    <Content Include="Content\images\logo\top-logo.png" />
+    <Content Include="Content\images\logo\logo.svg" />
     <Content Include="Content\images\products\img1-2.jpg" />
     <Content Include="Content\images\products\img1.jpg" />
     <Content Include="Content\images\products\img10-2.jpg" />
@@ -279,6 +279,7 @@
     <Content Include="Scripts\lightslider.min.js" />
     <Content Include="Scripts\menu-filter.min.js" />
     <Content Include="Scripts\menu-filter.js" />
+    <Content Include="Scripts\modernizr-2.8.3.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\parallax.js" />
     <Content Include="Scripts\product.js" />

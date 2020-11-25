@@ -107,7 +107,7 @@ b {
     }
 
 .btn-secondary {
-    background: rgb(37, 37, 37) !important;
+    background: rgb(1, 1, 1) !important;
 }
 
 .btn-outline-primary:disabled {
@@ -167,7 +167,7 @@ b {
 }
 
 .header-black-bg {
-    background: rgb(37, 37, 37) !important;
+    background: rgb(1, 1, 1) !important;
     box-shadow: 1px 1px 8px rgb(58, 58, 58);
 }
 
@@ -191,6 +191,10 @@ b {
     .nav-link:hover {
         color: #cb7152 !important;
     }
+
+img#logo {
+    width: 150px;
+}
 
 /** parallax section **/
 .parallax-section {
@@ -279,7 +283,7 @@ b {
 /** footer **/
 footer {
     padding: 10px;
-    background: rgb(37, 37, 37);
+    background: rgb(1, 1, 1);
     color: #fff;
 }
 
@@ -355,6 +359,10 @@ footer {
 
 /** x-small screen **/
 @media (max-width: 576px) {
+    img#logo {
+        width: 120px;
+    }
+
     #contact-section .parallax-section {
         height: 120vh;
         max-height: 650px;

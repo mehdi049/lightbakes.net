@@ -11,11 +11,13 @@ namespace LightBakes.Controllers
         public ActionResult Index()
         {
             ViewBag.Home = true;
+            ViewBag.PageTitle = "Light bakes";
             return View();
         }
 
         public ActionResult Menu()
         {
+            ViewBag.PageTitle = "Light bakes - Menu";
             return View();
         }
 
@@ -37,12 +39,14 @@ namespace LightBakes.Controllers
                     similarProducts = similarProducts.Where(x => x.Id != id).ToArray();
                     ViewBag.SimilarProducts = similarProducts;
                 }
+                ViewBag.PageTitle = "Light bakes - "+product.Title;
                 return View(product);
             }
         }
 
         public ActionResult Basket()
         {
+            ViewBag.PageTitle = "Light bakes - Panier";
             return View();
         }
 
