@@ -39,6 +39,7 @@ namespace LightBakes.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public bool SendOrder(FormCollection collection)
         {
             try
@@ -59,7 +60,8 @@ namespace LightBakes.Controllers
                     totalPrice += float.Parse(order.TotalPrice.Replace(".", ","));
                 }
 
-                body += "<br/><u>Prix total:</u> <b>" + totalPrice + " TND</b> <br/><br/>";
+                body += "<br/>Frais de livraison: 6 TND<br/>";
+                body += "<br/><b><u>Prix total:</u> " + (totalPrice + 6) + " TND</b> <br/><br/>";
 
                 body += "<h3>Information client:</h3>";
 

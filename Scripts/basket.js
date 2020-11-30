@@ -27,8 +27,15 @@
             basketTable += "</tr>";
             totalAmount += parseFloat("" + basketItem[i].TotalPrice.replace(/,/gi, "."));
         }
+        /** add delivery price **/
+        totalAmount += 6;
+
         basketTable += "<tr>";
-        basketTable += "<td colspan='2' class='text-right text-bold'>Total</td>";
+        basketTable += "<td colspan='2' class='text-right'><u>Frais de livraison</u> <span class='text-small'>(sur grand Tunis)</span></td>";
+        basketTable += "<td>6 TND</td>";
+        basketTable += "</tr>";
+        basketTable += "<tr>";
+        basketTable += "<td colspan='2' class='text-right text-bold'>TOTAL</td>";
         basketTable += "<td class='text-bold'>" + totalAmount + " TND</td>";
         basketTable += "</tr>";
 
