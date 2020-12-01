@@ -606,7 +606,7 @@
   {
     "id": "20",
     "title": "Mélasse de grenadine",
-    "description": "",
+    "description": "****************",
     "ingredient": "Grenadines.",
     "productOptions": [
       {
@@ -627,7 +627,7 @@
   {
     "id": "21",
     "title": "Mélasse de datte",
-    "description": "",
+    "description": "****************",
     "ingredient": "Dattes.",
     "productOptions": [
       {
@@ -648,7 +648,7 @@
   {
     "id": "22",
     "title": "Carrot cake",
-    "description": "",
+    "description": "****************",
     "ingredient": "Amande poudre, carottes, miel, noix.",
     "productOptions": [
       {
@@ -677,7 +677,7 @@
   {
     "id": "23",
     "title": "Banana bread",
-    "description": "",
+    "description": "****************",
     "ingredient": "Farine d'avoine, banane, banane séchée, miel.",
     "productOptions": [
       {
@@ -702,7 +702,7 @@
   {
     "id": "24",
     "title": "Jus d'oranges",
-    "description": "<br><u>Disponibilité selon la saison</u>",
+    "description": "****************<br><u>Disponibilité selon la saison</u>",
     "ingredient": "Oranges fraiches.",
     "productOptions": [
       {
@@ -727,7 +727,7 @@
   {
     "id": "25",
     "title": "Jus d'oranges / carottes",
-    "description": "<br><u>Disponibilité selon la saison</u>",
+    "description": "****************<br><u>Disponibilité selon la saison</u>",
     "ingredient": "Oranges et carottes fraiches.",
     "productOptions": [
       {
@@ -752,7 +752,7 @@
   {
     "id": "26",
     "title": "Jus de kiwi",
-    "description": "<br><u>Disponibilité selon la saison</u>",
+    "description": "****************<br><u>Disponibilité selon la saison</u>",
     "ingredient": "Kiwi fraiches.",
     "productOptions": [
       {
@@ -777,7 +777,7 @@
   {
     "id": "27",
     "title": "Jus de citron / menthe",
-    "description": "<br><u>Disponibilité selon la saison</u>",
+    "description": "****************<br><u>Disponibilité selon la saison</u>",
     "ingredient": "Citrons / menthes fraiches.",
     "productOptions": [
       {
@@ -802,7 +802,7 @@
   {
     "id": "28",
     "title": "Jus de pommes",
-    "description": "<br><u>Disponibilité selon la saison</u>",
+    "description": "****************<br><u>Disponibilité selon la saison</u>",
     "ingredient": "Pommes fraiches.",
     "productOptions": [
       {
@@ -827,7 +827,7 @@
   {
     "id": "29",
     "title": "Jus d'ananas",
-    "description": "<br><u>Disponibilité selon la saison</u>",
+    "description": "****************<br><u>Disponibilité selon la saison</u>",
     "ingredient": "Ananas frais.",
     "productOptions": [
       {
@@ -852,7 +852,7 @@
   {
     "id": "30",
     "title": "Jus de fraise",
-    "description": "<br><u>Disponibilité selon la saison</u>",
+    "description": "****************<br><u>Disponibilité selon la saison</u>",
     "ingredient": "Fraise frais.",
     "productOptions": [
       {
@@ -873,5 +873,63 @@
     "category": "Juice",
     "tags": "Health - Recipe - Juice",
     "images": [ "img30.jpg", "img30-2.jpg" ]
+  },
+  {
+    "id": "31",
+    "title": "Tarte citron",
+    "description": "*****",
+    "ingredient": "****",
+    "productOptions": [
+      {
+        "option": "standard",
+        "price": 0
+      }
+    ],
+    "unityOptions": [
+      {
+        "unity": "Petit format",
+        "price": 2
+      },
+      {
+        "unity": "Moyen format",
+        "price": 2.5
+      },
+      {
+        "unity": "Grand format (pour 10 personnes)",
+        "price": 10
+      }
+    ],
+    "category": "Tarte",
+    "tags": "Health - Recipe - Tarte",
+    "images": [ "img31.jpg" ]
+  },
+  {
+    "id": "32",
+    "title": "Tarte salé",
+    "description": "*****",
+    "ingredient": "****",
+    "productOptions": [
+      {
+        "option": "standard",
+        "price": 0
+      }
+    ],
+    "unityOptions": [
+      {
+        "unity": "Petit format",
+        "price": 2
+      },
+      {
+        "unity": "Moyen format",
+        "price": 3
+      },
+      {
+        "unity": "Grand format (pour 10 personnes)",
+        "price": 30
+      }
+    ],
+    "category": "Tarte",
+    "tags": "Health - Recipe - Tarte",
+    "images": [ "img32.jpg" ]
   }
 ]
