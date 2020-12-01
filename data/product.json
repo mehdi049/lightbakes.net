@@ -202,7 +202,7 @@
 
     "category": "Cream",
     "tags": "Health - Recipe - Creamy",
-    "images": [ "img6.jpg" ]
+    "images": [ "img6.jpg", "img6-2.jpg", "img6-3.jpg" ]
   },
   {
     "id": "7",
@@ -281,7 +281,7 @@
     ],
     "category": "Cookies",
     "tags": "Health - Recipe - Cookies",
-    "images": [ "img8.jpg", "img8-2.jpg" ]
+    "images": [ "img8.jpg", "img8-2.jpg", "img8-3.jpg" ]
   },
   {
     "id": "9",
@@ -545,9 +545,9 @@
         "price": 34
       }
     ],
-    "category": "Nutella",
-    "tags": "Health - Recipe - Nutella",
-    "images": [ "img17.jpg", "img17-2.jpg" ]
+    "category": "Cream",
+    "tags": "Health - Recipe - Cream",
+    "images": [ "img17.jpg", "img17-2.jpg", "img17-3.jpg" ]
   },
   {
     "id": "18",
@@ -600,13 +600,13 @@
       }
     ],
     "category": "Granola",
-    "tags": "Health - Recipe - Syrup",
+    "tags": "Health - Recipe - Granola",
     "images": [ "img19.jpg", "img19-2.jpg" ]
   },
   {
     "id": "20",
     "title": "Mélasse de grenadine",
-    "description": "****************",
+    "description": "La mélasse de grenadine est un concentré de grenadine extrait par un procédé entièrement naturel et élaboré de manière artisanale.",
     "ingredient": "Grenadines.",
     "productOptions": [
       {
@@ -627,7 +627,7 @@
   {
     "id": "21",
     "title": "Mélasse de datte",
-    "description": "****************",
+    "description": "La mélasse de dattes est un concentré de dattes extrait par un procédé entièrement naturel et élaboré de manière artisanale.",
     "ingredient": "Dattes.",
     "productOptions": [
       {
@@ -648,8 +648,8 @@
   {
     "id": "22",
     "title": "Carrot cake",
-    "description": "****************",
-    "ingredient": "Amande poudre, carottes, miel, noix.",
+    "description": "Chaque ingrédient dans le carrot cake est utilisé avec justesse. <br/>La carotte qui fera rougir les plus sceptiques, apporte une douceur impressionnante.",
+    "ingredient": "Noix, poudre d'amande, fraine d'avoine, carotte, miel.",
     "productOptions": [
       {
         "option": "standard",
@@ -677,8 +677,8 @@
   {
     "id": "23",
     "title": "Banana bread",
-    "description": "****************",
-    "ingredient": "Farine d'avoine, banane, banane séchée, miel.",
+    "description": "Un pain rapide moelleux, sucré avec du miel, semblable à un gâteau",
+    "ingredient": "Farine d'avoine, banane, miel, oeuf.",
     "productOptions": [
       {
         "option": "standard",
@@ -697,12 +697,12 @@
     ],
     "category": "Cake",
     "tags": "Health - Recipe - Cake",
-    "images": [ "img23.jpg", "img23-2.jpg" ]
+    "images": [ "img23.jpg", "img23-2.jpg", "img23-3.jpg" ]
   },
   {
     "id": "24",
     "title": "Jus d'oranges",
-    "description": "****************<br><u>Disponibilité selon la saison</u>",
+    "description": "Jus frais sans sucre. <br/><br/><u>Disponibilité selon la saison</u>",
     "ingredient": "Oranges fraiches.",
     "productOptions": [
       {
@@ -727,7 +727,7 @@
   {
     "id": "25",
     "title": "Jus d'oranges / carottes",
-    "description": "****************<br><u>Disponibilité selon la saison</u>",
+    "description": "Jus frais sans sucre. <br/><br/><u>Disponibilité selon la saison</u>",
     "ingredient": "Oranges et carottes fraiches.",
     "productOptions": [
       {
@@ -752,8 +752,8 @@
   {
     "id": "26",
     "title": "Jus de kiwi",
-    "description": "****************<br><u>Disponibilité selon la saison</u>",
-    "ingredient": "Kiwi fraiches.",
+    "description": "Jus frais sans sucre. <br/><br/><u>Disponibilité selon la saison</u>",
+    "ingredient": "Kiwi frais.",
     "productOptions": [
       {
         "option": "standard",
@@ -777,7 +777,7 @@
   {
     "id": "27",
     "title": "Jus de citron / menthe",
-    "description": "****************<br><u>Disponibilité selon la saison</u>",
+    "description": "Jus frais sans sucre. <br/><br/><u>Disponibilité selon la saison</u>",
     "ingredient": "Citrons / menthes fraiches.",
     "productOptions": [
       {
@@ -802,7 +802,7 @@
   {
     "id": "28",
     "title": "Jus de pommes",
-    "description": "****************<br><u>Disponibilité selon la saison</u>",
+    "description": "Jus frais sans sucre. <br/><br/><u>Disponibilité selon la saison</u>",
     "ingredient": "Pommes fraiches.",
     "productOptions": [
       {
@@ -827,7 +827,7 @@
   {
     "id": "29",
     "title": "Jus d'ananas",
-    "description": "****************<br><u>Disponibilité selon la saison</u>",
+    "description": "Jus frais sans sucre. <br/><br/><u>Disponibilité selon la saison</u>",
     "ingredient": "Ananas frais.",
     "productOptions": [
       {
@@ -852,7 +852,7 @@
   {
     "id": "30",
     "title": "Jus de fraise",
-    "description": "****************<br><u>Disponibilité selon la saison</u>",
+    "description": "Jus frais sans sucre. <br/><br/><u>Disponibilité selon la saison</u>",
     "ingredient": "Fraise frais.",
     "productOptions": [
       {
@@ -877,8 +877,8 @@
   {
     "id": "31",
     "title": "Tarte citron",
-    "description": "*****",
-    "ingredient": "****",
+    "description": "Tarte citron healthy!",
+    "ingredient": "Pâte sablée avec farine d'avoine, crème et confit de citron, miel.",
     "productOptions": [
       {
         "option": "standard",
@@ -905,9 +905,9 @@
   },
   {
     "id": "32",
-    "title": "Tarte salée amande",
-    "description": "*****",
-    "ingredient": "****",
+    "title": "Quiche salée amande",
+    "description": "Cette superbe quiche gourmande ravira vos convives à coup sûr par son moelleux, ses saveurs et son visuel 'fait maison'!",
+    "ingredient": "Thon ou escalope, fromage blanc, ricotta, champignon, oignons sautés, basilic, romarin avec une touche d'amandes effilées.",
     "productOptions": [
       {
         "option": "standard",
@@ -931,5 +931,30 @@
     "category": "Tarte",
     "tags": "Health - Recipe - Tarte",
     "images": [ "img32.jpg" ]
+  },
+  {
+    "id": "33",
+    "title": "Jus de grenadines",
+    "description": "Jus frais sans sucre. <br/><br/><u>Disponibilité selon la saison</u>",
+    "ingredient": "Grenadines fraiches.",
+    "productOptions": [
+      {
+        "option": "standard",
+        "price": 0
+      }
+    ],
+    "unityOptions": [
+      {
+        "unity": "300 ml",
+        "price": 2.3
+      },
+      {
+        "unity": "1 Litre",
+        "price": 7
+      }
+    ],
+    "category": "Juice",
+    "tags": "Health - Recipe - Juice",
+    "images": [ "img33.jpg", "img33-2.jpg" ]
   }
 ]

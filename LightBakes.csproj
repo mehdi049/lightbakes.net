@@ -212,6 +212,7 @@
     <Content Include="Content\images\products\img16-3.jpg" />
     <Content Include="Content\images\products\img16.jpg" />
     <Content Include="Content\images\products\img17-2.jpg" />
+    <Content Include="Content\images\products\img17-3.jpg" />
     <Content Include="Content\images\products\img17.jpg" />
     <Content Include="Content\images\products\img18.jpg" />
     <Content Include="Content\images\products\img19-2.jpg" />
@@ -222,6 +223,7 @@
     <Content Include="Content\images\products\img22-1.jpg" />
     <Content Include="Content\images\products\img22.jpg" />
     <Content Include="Content\images\products\img23-2.jpg" />
+    <Content Include="Content\images\products\img23-3.jpg" />
     <Content Include="Content\images\products\img23.jpg" />
     <Content Include="Content\images\products\img24-2.jpg" />
     <Content Include="Content\images\products\img24.jpg" />
@@ -240,11 +242,16 @@
     <Content Include="Content\images\products\img30.jpg" />
     <Content Include="Content\images\products\img31.jpg" />
     <Content Include="Content\images\products\img32.jpg" />
+    <Content Include="Content\images\products\img33-2.jpg" />
+    <Content Include="Content\images\products\img33.jpg" />
     <Content Include="Content\images\products\img4.jpg" />
     <Content Include="Content\images\products\img5.jpg" />
+    <Content Include="Content\images\products\img6-2.jpg" />
+    <Content Include="Content\images\products\img6-3.jpg" />
     <Content Include="Content\images\products\img6.jpg" />
     <Content Include="Content\images\products\img7.jpg" />
     <Content Include="Content\images\products\img8-2.jpg" />
+    <Content Include="Content\images\products\img8-3.jpg" />
     <Content Include="Content\images\products\img8.jpg" />
     <Content Include="Content\images\products\img9-2.jpg" />
     <Content Include="Content\images\products\img9.jpg" />
