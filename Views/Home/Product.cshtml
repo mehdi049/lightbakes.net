@@ -35,7 +35,7 @@
                         <select id="price-option" class="form-control">
                             @foreach (var unity in Model.UnityOptions)
                             {
-                                <option value="@unity.Price">@unity.Unity (@unity.Price TND)</option>
+                                <option value="@unity.Price">@unity.Unity (@unity.Price.ToString().Replace(".", ",") TND)</option>
                             }
                         </select>
                     </div>
@@ -47,7 +47,7 @@
                             {
                                 <option value="@option.Option">
                                     @option.Option (@if (option.Price != 0)
-                                    {<text>+@option.Price TND</text>}
+                                    {<text>+@option.Price.ToString().Replace(".", ",") TND</text>}
                                 else
                                 {<text>Gratuit</text>})
                                 </option>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <p class="text-large text-bold orange" id="total-price" style="display: inline-block">@Model.UnityOptions[0].Price</p> <span class="text-large text-bold orange">TND</span>
+                    <p class="text-large text-bold orange" id="total-price" style="display: inline-block">@Model.UnityOptions[0].Price.ToString().Replace(".",",")</p> <span class="text-large text-bold orange">TND</span>
                 </div>
             </div>
         </div>

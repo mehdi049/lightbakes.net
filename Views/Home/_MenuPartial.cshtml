@@ -29,7 +29,7 @@
                             <br />
                             <span class="text-bold">@product.Title</span> <br />
                             <span class="text-thin text-small">@product.Tags</span> <br />
-                            <span class="text-bold text-italic">@product.UnityOptions[0].Price TND</span><span class="text-small"> (@product.UnityOptions[0].Unity)</span>
+                            <span class="text-bold text-italic">@product.UnityOptions[0].Price.ToString().Replace(".", ",") TND</span><span class="text-small"> (@product.UnityOptions[0].Unity)</span>
                         </div>
                     </div>
                 </a>
