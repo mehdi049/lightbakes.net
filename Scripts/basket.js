@@ -25,7 +25,7 @@
             basketTable += "<td>" + basketItem[i].TotalPrice + " TND</td>";
             basketTable += "<td><i class='fas fa-trash-alt pointer' data-id='" + basketItem[i].Id + "'></i></td>";
             basketTable += "</tr>";
-            totalAmount += parseFloat("" + basketItem[i].TotalPrice.replace(/,/gi, "."));
+            totalAmount += parseFloat("" + basketItem[i].TotalPrice.replace(",", "."));
         }
         /** add delivery price **/
         totalAmount += 6;
@@ -36,7 +36,7 @@
         basketTable += "</tr>";
         basketTable += "<tr>";
         basketTable += "<td colspan='2' class='text-right text-bold'>TOTAL</td>";
-        basketTable += "<td class='text-bold'>" + totalAmount + " TND</td>";
+        basketTable += "<td class='text-bold'>" + (totalAmount+"").replace(".", ",") + " TND</td>";
         basketTable += "</tr>";
 
         $("#basket-body").html(basketTable);

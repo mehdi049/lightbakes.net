@@ -42,10 +42,10 @@
             (x) => x.Option.toLowerCase() === productOption.toLowerCase()
         )[0].Price;
 
-        var totalPrice = (unityOptionPrice.replace(/,/gi, ".") * quantity) + (productOptionPrice * quantity);
+        var totalPrice = (unityOptionPrice.replace(",", ".") * quantity) + (productOptionPrice * quantity);
 
         var totalPriceText = "" + totalPrice;
-        $("#total-price").html(totalPriceText.replace(/\./gi, ","));
+        $("#total-price").html(totalPriceText.replace(".", ","));
     });
 
     function getProduct() {
