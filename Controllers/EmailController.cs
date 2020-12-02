@@ -64,7 +64,7 @@ namespace LightBakes.Controllers
                 }
 
                 body += "<br/>Frais de livraison: 6 TND<br/>";
-                body += "<br/><b><u>Prix total:</u> " + (totalPrice + 6) + " TND</b> <br/><br/>";
+                body += "<br/><b><u>Prix total:</u> " + (totalPrice + 6).ToString().Replace(".", ",") + " TND</b> <br/><br/>";
 
                 body += "<h3>Information client:</h3>";
 
