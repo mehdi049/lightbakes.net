@@ -1,6 +1,7 @@
 ﻿using LightBakes.Models;
 using Newtonsoft.Json;
 using System;
+using System.Globalization;
 using System.Web.Mvc;
 
 namespace LightBakes.Controllers
@@ -53,11 +54,13 @@ namespace LightBakes.Controllers
                 string body = "<h3>Commande:</h3>";
                 int i = 1;
                 float totalPrice = 0;
+                var culture = (CultureInfo)CultureInfo.CurrentCulture.Clone();
+                culture.NumberFormat.NumberDecimalSeparator = ",";
                 foreach (var order in orders)
                 {
-                    body += i + ") " + order.Quantity + " " + order.Product + ", " + order.Unity + " " + order.Option + " - " + order.TotalPrice + " TND <br/>";
+                    body += i + ") " + order.Quantity + " " + order.Product + ", " + order.Unity + " " + order.Option + " - " + order.TotalPrice.Replace(".", ",") + " TND <br/>";
                     i++;
-                    totalPrice += float.Parse(order.TotalPrice.Replace(".", ","));
+                    totalPrice += float.Parse(order.TotalPrice.Replace(".", ","), culture);
                 }
 
                 body += "<br/>Frais de livraison: 6 TND<br/>";
