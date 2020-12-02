@@ -251,32 +251,24 @@
       {
         "option": "cacahuètes",
         "price": 0
-      },
-      {
-        "option": "amondes",
-        "price": 1.5
-      },
-      {
-        "option": "noisettes",
-        "price": 2
       }
     ],
     "unityOptions": [
       {
         "unity": "1 grande pièce",
-        "price": 1.8
+        "price": 1.9
       },
       {
         "unity": "100 gr",
-        "price": 3
+        "price": 3.3
       },
       {
         "unity": "500 gr",
-        "price": 15
+        "price": 16
       },
       {
         "unity": "1 kg",
-        "price": 30
+        "price": 32
       }
     ],
     "category": "Cookies",
@@ -291,7 +283,7 @@
     "nutritionalValue": "490 Kcal / Muffin",
     "productOptions": [
       {
-        "option": "taille normal",
+        "option": "standard",
         "price": 0
       },
       {
@@ -317,7 +309,7 @@
     "nutritionalValue": "466 Kcal / 100 gr",
     "productOptions": [
       {
-        "option": "taille normal",
+        "option": "standard",
         "price": 0
       },
       {
@@ -343,7 +335,7 @@
     "nutritionalValue": "338 Kcal / 100 gr",
     "productOptions": [
       {
-        "option": "taille normal",
+        "option": "standard",
         "price": 0
       },
       {
@@ -538,11 +530,11 @@
     "unityOptions": [
       {
         "unity": "200 gr",
-        "price": 14.5
+        "price": 14
       },
       {
         "unity": "500 gr",
-        "price": 34
+        "price": 33
       }
     ],
     "category": "Cream",
@@ -618,6 +610,10 @@
       {
         "unity": "200 gr",
         "price": 10
+      },
+      {
+        "unity": "500 gr",
+        "price": 23
       }
     ],
     "category": "Syrup",
@@ -639,6 +635,10 @@
       {
         "unity": "200 gr",
         "price": 7
+      },
+      {
+        "unity": "500 gr",
+        "price": 16
       }
     ],
     "category": "Syrup",
@@ -663,11 +663,11 @@
     "unityOptions": [
       {
         "unity": "Petit format",
-        "price": 1.8
+        "price": 2
       },
       {
         "unity": "Grand format",
-        "price": 9
+        "price": 10
       }
     ],
     "category": "Cake",
@@ -688,11 +688,11 @@
     "unityOptions": [
       {
         "unity": "Petit format",
-        "price": 1.8
+        "price": 2
       },
       {
         "unity": "Grand format",
-        "price": 9
+        "price": 10
       }
     ],
     "category": "Cake",
@@ -713,11 +713,11 @@
     "unityOptions": [
       {
         "unity": "300 ml",
-        "price": 1.5
+        "price": 1.8
       },
       {
         "unity": "1 Litre",
-        "price": 5
+        "price": 6
       }
     ],
     "category": "Juice",
@@ -738,11 +738,11 @@
     "unityOptions": [
       {
         "unity": "300 ml",
-        "price": 2
+        "price": 2.3
       },
       {
         "unity": "1 Litre",
-        "price": 6
+        "price": 6.5
       }
     ],
     "category": "Juice",
@@ -763,7 +763,7 @@
     "unityOptions": [
       {
         "unity": "300 ml",
-        "price": 2
+        "price": 3
       },
       {
         "unity": "1 Litre",
@@ -788,11 +788,11 @@
     "unityOptions": [
       {
         "unity": "300 ml",
-        "price": 1.5
+        "price": 2.3
       },
       {
         "unity": "1 Litre",
-        "price": 5
+        "price": 6.5
       }
     ],
     "category": "Juice",
@@ -813,11 +813,11 @@
     "unityOptions": [
       {
         "unity": "300 ml",
-        "price": 2.3
+        "price": 2.5
       },
       {
         "unity": "1 Litre",
-        "price": 7
+        "price": 7.5
       }
     ],
     "category": "Juice",
@@ -838,7 +838,7 @@
     "unityOptions": [
       {
         "unity": "300 ml",
-        "price": 3
+        "price": 3.5
       },
       {
         "unity": "1 Litre",
@@ -863,11 +863,11 @@
     "unityOptions": [
       {
         "unity": "300 ml",
-        "price": 2
+        "price": 2.5
       },
       {
         "unity": "1 Litre",
-        "price": 7
+        "price": 7.5
       }
     ],
     "category": "Juice",
@@ -946,11 +946,11 @@
     "unityOptions": [
       {
         "unity": "300 ml",
-        "price": 2.3
+        "price": 2.5
       },
       {
         "unity": "1 Litre",
-        "price": 7
+        "price": 7.5
       }
     ],
     "category": "Juice",

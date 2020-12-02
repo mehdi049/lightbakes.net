@@ -72,7 +72,6 @@ namespace LightBakes.Controllers
                 body += "<b>Tel: </b>" + customerInfo.Tel;
                 body += "<br/>";
                 body += "<b>Adresse: </b>" + customerInfo.Address;
-
                 return _mailer.SendEmailAsync("contact.lightbakes@gmail.com", "contact.lightbakes@gmail.com", "Nouvelle commande", body);
             }
             catch
