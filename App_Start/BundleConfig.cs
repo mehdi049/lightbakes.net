@@ -26,7 +26,7 @@ namespace LightBakes
                       "~/Content/fontawesome.min.css",
                       "~/Content/bootstrap.min.css",
                       "~/Content/jquery.toast.min.css",
-                      "~/Content/site.min.css"));
+                      "~/Content/site.min.v2.css"));
         }
     }
 }
