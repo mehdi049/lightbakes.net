@@ -31,7 +31,7 @@
         totalAmount += 6;
 
         basketTable += "<tr>";
-        basketTable += "<td colspan='2' class='text-right'><u>Frais de livraison</u> <span class='text-small'>(sur grand Tunis)</span></td>";
+        basketTable += "<td colspan='2' class='text-right'><u>Frais de livraison</u> <span class='text-small'>(Grand Tunis, Monastir, Sousse)</span></td>";
         basketTable += "<td>6 TND</td>";
         basketTable += "</tr>";
         basketTable += "<tr>";

@@ -14,6 +14,7 @@ namespace LightBakes.Models
         public string Category { get; set; }
         public string Tags { get; set; }
         public string[] Images { get; set; }
+        public bool Available { get; set; }
     }
 
     public class ProductOptions

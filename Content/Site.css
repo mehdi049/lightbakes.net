@@ -278,6 +278,7 @@ img#logo {
     background: #fff;
     padding: 20px;
     margin-top: 7%;
+    max-width: 570px;
 }
 
 /** footer **/
@@ -288,7 +289,6 @@ footer {
 }
 
 /** home **/
-
 #home-section {
     width: 280px;
     color: white;
@@ -303,18 +303,17 @@ footer {
     max-width: 310px;
 }
 
-/** gallery */
-#gallery-img img {
-    width: 100%;
-    height: 260px;
-}
-
-#gallery-img > div {
-    padding: 3px;
+/** product */
+.not-available-text {
+    color: #b72222;
+    border: solid 2px #b72222;
+    padding: 10px;
+    display: inline-block;
+    font-weight: 600;
+    font-style: italic;
 }
 
 /** media query **/
-
 /** medium - xl screen **/
 @media (min-width: 768px) and (max-width: 1200px) {
     .img-area {
@@ -353,7 +352,7 @@ footer {
     }
 
     #contact-form {
-        margin-top: 20%;
+        margin-top: 10%;
     }
 }
 

@@ -29,46 +29,58 @@
                 <p><span class="text-bold">Valeur nutritionnelle</span></p>
                 <p>@Model.NutritionalValue</p>
             }
-            <div class="row" id="order-form">
-                <div class="col-lg-5 col-md-6 col-sm-4 col-6">
-                    <div class="form-group">
-                        <select id="price-option" class="form-control">
-                            @foreach (var unity in Model.UnityOptions)
-                            {
-                                <option value="@unity.Price">@unity.Unity (@unity.Price.ToString().Replace(".", ",") TND)</option>
-                            }
-                        </select>
+            @if (Model.Available == true)
+            {
+                <div class="row" id="order-form">
+                    <div class="col-lg-5 col-md-6 col-sm-4 col-6">
+                        <div class="form-group">
+                            <select id="price-option" class="form-control">
+                                @foreach (var unity in Model.UnityOptions)
+                                {
+                                    <option value="@unity.Price">@unity.Unity (@unity.Price.ToString().Replace(".", ",") TND)</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-4 col-6">
+                        <div class="form-group">
+                            <select id="product-option" class="form-control">
+                                @foreach (var option in Model.ProductOptions)
+                                {
+                                    <option value="@option.Option">
+                                        @option.Option (@if (option.Price != 0)
+                                        {<text>+@option.Price.ToString().Replace(".", ",") TND</text>}
+                                    else
+                                    {<text>Gratuit</text>})
+                                    </option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-2 col-3">
+                        <div class="form-group">
+                            <input id="quantity" type="text" min="1" class="form-control" value="1">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-9 col-sm-6 col-9">
+                        <div class="form-group">
+                            <button type="button" id="submit-btn" class="btn btn-outline-primary btn-block">Ajouter au panier</button>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p class="text-large text-bold orange" id="total-price" style="display: inline-block">@Model.UnityOptions[0].Price.ToString().Replace(".", ",")</p> <span class="text-large text-bold orange">TND</span>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-4 col-6">
-                    <div class="form-group">
-                        <select id="product-option" class="form-control">
-                            @foreach (var option in Model.ProductOptions)
-                            {
-                                <option value="@option.Option">
-                                    @option.Option (@if (option.Price != 0)
-                                    {<text>+@option.Price.ToString().Replace(".", ",") TND</text>}
-                                else
-                                {<text>Gratuit</text>})
-                                </option>
-                            }
-                        </select>
+            }
+            else
+            {
+                <div class="row">
+                    <div class="col">
+                        <br/>
+                        <p class="not-available-text">Produit actuellement indisponible.</p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-2 col-3">
-                    <div class="form-group">
-                        <input id="quantity" type="text" min="1" class="form-control" value="1">
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-9 col-sm-6 col-9">
-                    <div class="form-group">
-                        <button type="button" id="submit-btn" class="btn btn-outline-primary btn-block">Ajouter au panier</button>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <p class="text-large text-bold orange" id="total-price" style="display: inline-block">@Model.UnityOptions[0].Price.ToString().Replace(".",",")</p> <span class="text-large text-bold orange">TND</span>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </div>
