@@ -258,7 +258,7 @@
     <Content Include="Content\lightslider.css" />
     <Content Include="Content\lightslider.min.css" />
     <Content Include="Content\site.css" />
-    <Content Include="Content\site.min.css" />
+    <Content Include="Content\site.min.v2.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fa-brands-400.svg" />
     <Content Include="fonts\fa-regular-400.svg" />
