@@ -32,7 +32,7 @@
     "category": "Cream",
     "tags": "Health - Recipe - Creamy",
     "images": [ "img1.jpg", "img1-2.jpg" ],
-    "available":  true
+    "available": true
   },
   {
     "id": "2",
@@ -988,6 +988,44 @@
     "category": "Juice",
     "tags": "Health - Recipe - Juice",
     "images": [ "img33.jpg", "img33-2.jpg" ],
+    "available": true
+  },
+  {
+    "id": "34",
+    "title": "Biscuit façon mendiant",
+    "description": "Un biscuit au chocolat et fruits secs... Que demander de plus ?",
+    "ingredient": "Farine d'avoine, huile de colza, miel.",
+    "productOptions": [
+      {
+        "option": "standard",
+        "price": 0
+      },
+      {
+        "option": "chocolat noir",
+        "price": 0
+      },
+      {
+        "option": "chocolat au lait",
+        "price": 0
+      },
+      {
+        "option": "caramel beurre salé",
+        "price": 2
+      }
+    ],
+    "unityOptions": [
+      {
+        "unity": "200 g",
+        "price": 7.5
+      },
+      {
+        "unity": "500 g",
+        "price": 18
+      }
+    ],
+    "category": "Cookies",
+    "tags": "Health - Recipe - Cookies",
+    "images": [ "img34.jpg"],
     "available": true
   }
 ]
