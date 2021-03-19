@@ -1,0 +1,140 @@
+﻿@model LightBakes.Models.Product
+
+<div class="center-content container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-bold text-center">@Model.Title</h1><br>
+            <hr><br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-5 col-sm-12">
+            <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                @foreach (var img in Model.Images)
+                {
+                    <li data-thumb="/images/products/@img">
+                        <img src="/images/products/@img" />
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="col-lg-6 col-md-7 col-sm-12">
+            <br class="d-block d-md-none">
+            <p>@Html.Raw(Model.Description)</p>
+            <p><span class="text-bold">Ingédients</span></p>
+            <p>@Model.Ingredient</p>
+            @if (!string.IsNullOrEmpty(Model.NutritionalValue))
+            {
+                <p><span class="text-bold">Valeur nutritionnelle</span></p>
+                <p>@Model.NutritionalValue</p>
+            }
+            @if (Model.Available == true)
+            {
+                <div class="row" id="order-form">
+                    <div class="col-lg-5 col-md-6 col-sm-4 col-6">
+                        <div class="form-group">
+                            <select id="price-option" class="form-control">
+                                @foreach (var unity in Model.UnityOptions)
+                                {
+                                    <option value="@unity.Price">@unity.Unity (@unity.Price.ToString().Replace(".", ",") TND)</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-4 col-6">
+                        <div class="form-group">
+                            <select id="product-option" class="form-control">
+                                @foreach (var option in Model.ProductOptions)
+                                {
+                                    <option value="@option.Option">
+                                        @option.Option (@if (option.Price != 0)
+                                        {<text>+@option.Price.ToString().Replace(".", ",") TND</text>}
+                                    else
+                                    {<text>Gratuit</text>})
+                                    </option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-2 col-3">
+                        <div class="form-group">
+                            <input id="quantity" type="text" min="1" class="form-control" value="1">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-9 col-sm-6 col-9">
+                        <div class="form-group">
+                            <button type="button" id="submit-btn" class="btn btn-outline-primary btn-block">Ajouter au panier</button>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p class="text-large text-bold orange" id="total-price" style="display: inline-block">@Model.UnityOptions[0].Price.ToString().Replace(".", ",")</p> <span class="text-large text-bold orange">TND</span>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="row">
+                    <div class="col">
+                        <br />
+                        <p class="not-available-text">Produit actuellement indisponible.</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<br />
+
+@if (ViewBag.SimilarProducts != null)
+{
+    <br />
+    <br />
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="text-center col">
+                <h1 class="border-orange inline-block">Produits similaires</h1><br>
+            </div>
+        </div>
+        <ul id="content-slider">
+            @foreach (var product in ViewBag.SimilarProducts)
+            {
+                <li>
+                    <a class="menu-item-link" href="/product/@product.Id">
+                        <div class="menu-item">
+                            <div class="img-area"><img src="~/images/thumbs/@product.Images[0]" alt="@product.Title"/></div>
+                            <div style="text-align: center;">
+                                <br/>
+                                <span class="text-bold">@product.Title</span> <br/>
+                                <span class="text-thin text-small">@product.Tags</span> <br/>
+                                <span class="text-bold text-italic">@product.UnityOptions[0].Price TND</span>
+                                <span class="text-small"> (@product.UnityOptions[0].Unity)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+
+    <br />
+    <br />
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/lightslider.min.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <!-- lightslider.js -->
+    <script src="~/js/lightslider.min.js" asp-append-version="true"></script>
+    <!-- product.js -->
+    <script>
+        var thumbItemNumber = @Model.Images.Length;
+        var productJson = "@ViewBag.ProductJson";
+    </script>
+    <script src="~/js/product.min.js" asp-append-version="true"></script>
+}
+

@@ -1,0 +1,57 @@
+﻿<div id="contact-section">
+    <div class="parallax-section" data-image-src="/images/bg/img-bg2.jpg">
+        <div id="contact" class="container">
+            <div class="row">
+                <div id="contact-form" class="col-md-9 col-lg-8">
+                    <h1 class="text-center">Prenez contact</h1>
+                    <br />
+                    <form class="">
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group"><input id="contact-name" placeholder="Nom et prénom" type="text" class="form-control" value="" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group"><input id="contact-email" placeholder="Email" type="text" class="form-control" value="" /></div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group"><input id="contact-tel" placeholder="Num. Tél" type="text" class="form-control" value="" /></div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group"><textarea id="contact-message" rows="4" placeholder="Message..." class="form-control"></textarea></div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col"><button type="button" class="btn btn-outline-primary btn-block btn-lg" id="submit-contact">Envoyer</button></div>
+                        </div>
+                    </form>
+                    <br />
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <p class="text-bold">
+                                Suiver nous sur &nbsp;<a href="https://www.instagram.com/light.bakes/" target="_blank" rel="noopener noreferrer" class="no-underline"> <i class="fab fa-instagram-square"></i> </a>
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <i class="fas fa-phone-alt"></i>&nbsp; 53 755 754 <span class="text-small">(Grand Tunis)</span><br />
+                            <i class="fas fa-phone-alt"></i>&nbsp; 54 513 224 <span class="text-small">(Monastir / Sousse)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <div class="container">
+        <div class="col">© @DateTime.Now.Year Light bakes, tout droit reservé</div>
+    </div>
+</footer>

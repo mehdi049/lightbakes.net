@@ -1,0 +1,24 @@
+﻿<div id="home" class="parallax-section" data-image-src="/images/bg/img-bg1.jpg">
+    <div style="height: 500px">
+        <div id="home-section">
+            <h1 class="border-orange text-center">
+                <i>Light Bakes</i>
+            </h1>
+            <span class="text-center text-thin">
+                Stay healthy, stay fit
+            </span>
+        </div>
+    </div>
+    <div id="menu"></div>
+</div>
+
+<br />
+<br />
+<br />
+
+@await Html.PartialAsync("_MenuPartial", (Product[])ViewBag.products)
+
+@section Scripts {
+    <!-- home.js -->
+    <script src="~/js/home.min.js" asp-append-version="true"></script>
+}

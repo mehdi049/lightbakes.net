@@ -1,0 +1,90 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="center-content container-fluid">
+    <div class="row">
+        <div class="text-center col">
+            <h1 class="border-orange inline-block">Mon panier</h1><br>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row hide" id="empty-basket-msg">
+        <div class="col">
+            <div role="alert" class="fade alert alert-info show">Le panier est vide.</div>
+        </div>
+    </div>
+    <div class="row hide" id="basket-list">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-bold">Produit</th>
+                            <th class="text-bold">Quantité</th>
+                            <th class="text-bold">Prix</th>
+                            <th class="text-bold" style="width: 100px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="basket-body">
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+                    <p class="text-italic">
+                        <i class="fas fa-truck"></i>&nbsp; <b>Paiement à la livraison.</b>
+                        <br><br>
+                        <b>Note:</b> Le panier sera réinitialisé aprés le passage de la commande.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="text-right">
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#customer-info-popup">Passer la commande</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="customer-info-popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmer la commande</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <input id="customer-name" placeholder="Nom et prénom / nom de l'entreprise" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input id="customer-email" placeholder="Email" type="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input id="customer-tel" placeholder="Num. Tél" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <textarea id="customer-address" rows="5" placeholder="Adresse" class="form-control"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-outline-primary" id="submit-order">Confirmer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+@section Scripts {
+    <!-- basket.js -->
+    <script src="~/js/basket.min.js" asp-append-version="true"></script>
+}

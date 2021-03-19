@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>@ViewData["Title"]</title>
+    <meta name="description"
+          content="Site de vente de produit healthy food sur commande" />
+    <meta name="keywords"
+          content="Healthy food, Tunisie, vente en ligne, vente healthy food en ligne, Beurre, Beurre de cacahuète, Beurre de sesame, Beurre de noisette, Beurre d'amandes, Beurre de cajou, Beurre de pistache, Beurre de noix, Cookies, Muffin, Brownies, Fondant, Boules d'energie, Energy, Granola, Granola bar, Sauce, Sauce pesto, tarte, Fonds de tartes" />
+
+    @RenderSection("Styles", required: false)
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="preload" as="style" media="none" onload="this.media='all'; this.onload = null" />
+    <link rel="stylesheet" href="~/css/jquery.toast.min.css" rel="preload" as="style" media="none" onload="this.media='all'; this.onload = null" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="preload" as="style" />
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" rel="preload" as="style" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="header">
+        <div class="container">
+            @if (ViewBag.Home == true)
+            {
+                <a class="navbar-brand nav-link" href="#home"><img src="~/images/logo/logo.svg" id="logo" alt="logo" /></a>
+            }
+            else
+            {
+                <a class="navbar-brand nav-link" href="/"><img src="~/images/logo/logo.svg" id="logo" alt="logo" /></a>
+            }
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        @if (ViewBag.Home == true)
+                        {
+                            <a class="nav-link" href="#menu">Menu</a>
+                        }
+                        else
+                        {
+                            <a class="nav-link" href="/menu">Menu</a>
+                        }
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item d-block d-md-none">
+                        <a class="nav-link" href="/basket">Mon panier &nbsp;<i class="fas fa-shopping-basket"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="justify-content-end navbar-collapse collapse">
+                <a class="nav-link" href="/basket">Mon panier &nbsp;<i class="fas fa-shopping-basket"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    @{Html.RenderPartial("_FooterPartial"); }
+
+    <script src="~/lib/jquery/dist/jquery.min.js" rel="preload" as="script" ></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" rel="preload" as="script"></script>
+    @RenderSection("Scripts", required: false)
+    <!-- parallax.js -->
+    <script src="~/js/parallax.min.js" rel="preload" as="script"></script>
+    <!-- toast.js -->
+    <script src="~/js/jquery.toast.min.js" rel="preload" as="script"></script>
+    <!-- menu-filter.js -->
+    <script src="~/js/menu-filter.min.js" asp-append-version="true" rel="preload" as="script"></script>
+    <!-- contact.js -->
+    <script src="~/js/contact.min.js" asp-append-version="true" rel="preload" as="script"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JX4ZFD5WG0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JX4ZFD5WG0');
+    </script>
+</body>
+</html>
